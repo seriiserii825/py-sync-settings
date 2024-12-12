@@ -18,7 +18,6 @@ def reposToFile(file_path):
             "oh-my-zsh",
             ".oh-my-zsh",
             "mysql",
-            "Local Sites"
             ]
 
     # Remove the old file if it exists
