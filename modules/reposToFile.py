@@ -50,7 +50,7 @@ def reposToFile(file_push, file_pull):
         # Process and write filtered paths
         git_paths = result.stdout.splitlines()
         filtered_paths = [path.replace(".git", "") for path in git_paths]
-        with open(file_push, "w") as file:
+        with open(file_path, "w") as file:
             file.write("\n".join(filtered_paths))
 
         # file lines count
