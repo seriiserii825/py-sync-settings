@@ -7,11 +7,12 @@ from modules.gitPullAll import gitPullAll
 from modules.gitPushAll import gitPushAll
 from modules.reposToFile import reposToFile
 
-file_path = os.path.join(os.path.expanduser('~'), 'Downloads', 'repos.txt')
+file_push = os.path.join(os.path.expanduser('~'), 'Downloads', 'push-repos.txt')
+file_pull = os.path.join(os.path.expanduser('~'), 'Downloads', 'pull-repos.txt')
 console = Console()
 
 def syncGit():
-    reposToFile(file_path)
+    reposToFile(file_push, file_pull)
     table_title = "Git Repository Manager"
     table_columns = ["Option", "Description"]
     table_rows = [
@@ -23,13 +24,13 @@ def syncGit():
     richTable(table_title, table_columns, table_rows)
     action = console.input("[cyan]What would you like to do? ")
     if action == "1":
-        gitPushAll(file_path)
+        gitPushAll(file_push)
     elif action == "2":
-        gitPullAll(file_path)
+        gitPullAll(file_pull)
     elif action == "3":
-        getCommits(file_path)
+        getCommits(file_push)
     elif action == "4":
-        getCommits(file_path, projects=True)
+        getCommits(file_push, projects=True)
     else:
         console.print("[red]Invalid option. Please try again.")
         exit()
