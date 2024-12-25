@@ -1,15 +1,16 @@
-import os
 import sys
 from rich.console import Console
 
+from classes.ReposFiles import ReposFiles
 from libs.richTable import richTable
 from modules.gitClone import gitClone
 from modules.gitPull import gitPull
 from modules.gitPush import gitPush
 from modules.syncGit import syncGit
 
-file_path = os.path.join(os.path.expanduser('~'), 'Downloads', 'repos.txt')
 console = Console()
+
+repose_files = ReposFiles()
 
 def menu():
     args = sys.argv

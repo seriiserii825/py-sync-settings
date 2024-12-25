@@ -5,14 +5,12 @@ from libs.richTable import richTable
 from modules.getCommits import getCommits
 from modules.gitPullAll import gitPullAll
 from modules.gitPushAll import gitPushAll
-from modules.reposToFile import reposToFile
 
 file_push = os.path.join(os.path.expanduser('~'), 'Downloads', 'push-repos.txt')
 file_pull = os.path.join(os.path.expanduser('~'), 'Downloads', 'pull-repos.txt')
 console = Console()
 
 def syncGit():
-    reposToFile(file_push, file_pull)
     table_title = "Git Repository Manager"
     table_columns = ["Option", "Description"]
     table_rows = [
