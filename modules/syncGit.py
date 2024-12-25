@@ -1,11 +1,14 @@
 import os
 from rich.console import Console
 
+from classes.ReposFiles import ReposFiles
 from libs.richTable import richTable
 from modules.getCommits import getCommits
 from modules.gitPullAll import gitPullAll
 from modules.gitPushAll import gitPushAll
 
+
+repose_files = ReposFiles()
 file_push = os.path.join(os.path.expanduser('~'), 'Downloads', 'push-repos.txt')
 file_pull = os.path.join(os.path.expanduser('~'), 'Downloads', 'pull-repos.txt')
 console = Console()

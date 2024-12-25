@@ -1,7 +1,5 @@
 import sys
 from rich.console import Console
-
-from classes.ReposFiles import ReposFiles
 from libs.richTable import richTable
 from modules.gitClone import gitClone
 from modules.gitPull import gitPull
@@ -9,8 +7,6 @@ from modules.gitPush import gitPush
 from modules.syncGit import syncGit
 
 console = Console()
-
-repose_files = ReposFiles()
 
 def menu():
     args = sys.argv
