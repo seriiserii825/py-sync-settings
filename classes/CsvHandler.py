@@ -12,17 +12,21 @@ class CsvHandler():
     def __init__(self):
         self.exclude_dirs = []
         self.exclude_for_pull = []
-        self.readExcludeDirs()
+        self.readExcludeDirs(self.EXCLUDE_DIRS_FILE)
+        self.readExcludeDirsForPull(self.EXCLUDE_FOR_PULL_FILE)
 
-    def readCsv(self, file_path):
+
+    def readExcludeDirs(self, file_path):
         with open(file_path, 'r') as file:
             lines = file.readlines()
             for line in lines:
                 self.exclude_dirs.append(line.strip())
 
-    def readExcludeDirs(self):
-        self.readCsv(self.EXCLUDE_DIRS_FILE)
-        self.readCsv(self.EXCLUDE_FOR_PULL_FILE)
+    def readExcludeDirsForPull(self, file_path):
+        with open(file_path, 'r') as file:
+            lines = file.readlines()
+            for line in lines:
+                self.exclude_for_pull.append(line.strip())
         
     def getExcludeDirs(self):
         return self.exclude_dirs

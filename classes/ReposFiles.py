@@ -1,5 +1,6 @@
 import os
 import subprocess
+from pprint import pprint
 
 from classes.CsvHandler import CsvHandler
 
@@ -21,6 +22,7 @@ class ReposFiles:
     def reposeWriteToFile(self, file_path, exclude_dirs):
         # Build the find command with exclusions
         base_command = ["find", os.path.expanduser("~"), "-maxdepth", "8", "-name", ".git", "-type", "d"]
+        # pprint(exclude_dirs)
         for exclude in exclude_dirs:
             base_command.extend(["-not", "-path", f"*/{exclude}/*"])
 
