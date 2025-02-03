@@ -9,3 +9,4 @@ settingsSync
 oh-my-zsh
 .oh-my-zsh
 mysql
+.local/share/nvim
