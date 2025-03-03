@@ -3,11 +3,11 @@ import os
 
 def gitClone():
     clipboard = subprocess.check_output("xclip -o -selection clipboard", shell=True, text=True).strip()
-    urls = ("github.com", "bitbucket.org", "gitlab.com")
+    urls = ("github.com", "bitbucket.org", "gitlab.com", "repo clone")
     if any(url in clipboard for url in urls):
         print(clipboard)
 
-        git_command = f"git clone {clipboard} --single-branch"
+        git_command = f"{clipboard} --single-branch"
         if "bitbucket.org" in clipboard:
             git_command = f"{clipboard}"
         subprocess.run(git_command, shell=True, check=True)
