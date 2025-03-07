@@ -8,7 +8,9 @@ def gitClone():
         print(clipboard)
 
         git_command = f"{clipboard} --single-branch"
-        if "bitbucket.org" in clipboard:
+        if "github.com" in clipboard:
+            git_command = f"git clone {clipboard}"
+        else:
             git_command = f"{clipboard}"
         subprocess.run(git_command, shell=True, check=True)
 
