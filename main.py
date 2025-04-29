@@ -1,3 +1,4 @@
+import os
 import sys
 from rich.console import Console
 from libs.richTable import richTable
@@ -26,6 +27,7 @@ def menu():
         ["[green]2) Pull[/]", "Pull"],
         ["[yellow]3) Sync[/]", "Sync all repositories."],
         ["[green]4) Clone[/]", "Clone"],
+        ["[red]5) Remove Sync files[/]", "Remove sync files."],
     ]
     richTable(table_title, table_columns, table_rows)
     action = console.input("[cyan]What would you like to do? ")
@@ -37,6 +39,9 @@ def menu():
         syncGit()
     elif action == "4":
         gitClone()
+    elif action == "5":
+        command = "rm -rf ~/Documents/push-repos.txt ~/Documents/pull-repos.txt"
+        os.system(command)
     else:
         gitPush(commit_message)
 menu()

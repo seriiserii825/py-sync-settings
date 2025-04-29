@@ -6,8 +6,8 @@ from classes.CsvHandler import CsvHandler
 
 
 class ReposFiles:
-    PUSH_FILE = os.path.join(os.path.expanduser('~'), 'Downloads', 'push-repos.txt')
-    PUT_FILE = os.path.join(os.path.expanduser('~'), 'Downloads', 'pull-repos.txt')
+    PUSH_FILE = os.path.join(os.path.expanduser('~'), 'Documents', 'push-repos.txt')
+    PUT_FILE = os.path.join(os.path.expanduser('~'), 'Documents', 'pull-repos.txt')
     def __init__(self):
         self.csvHandler = CsvHandler()
         self.exclude_dirs = self.csvHandler.getExcludeDirs()
