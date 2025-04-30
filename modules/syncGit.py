@@ -12,8 +12,8 @@ from modules.gitPushAll import gitPushAll
 def syncGit():
     console = Console()
     ReposFiles()
-    file_push = os.path.join(os.path.expanduser('~'), 'Downloads', 'push-repos.txt')
-    file_pull = os.path.join(os.path.expanduser('~'), 'Downloads', 'pull-repos.txt')
+    file_push = os.path.join(os.path.expanduser('~'), 'Documents', 'push-repos.txt')
+    file_pull = os.path.join(os.path.expanduser('~'), 'Documents', 'pull-repos.txt')
     table_title = "Git Repository Manager"
     table_columns = ["Option", "Description"]
     table_rows = [
