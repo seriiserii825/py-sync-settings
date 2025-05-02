@@ -2,6 +2,8 @@ import os
 import subprocess
 from rich import print
 from classes.CsvHandler import CsvHandler
+from rich.console import Console
+console = Console()
 
 class ReposFiles:
     PUSH_FILE = os.path.join(os.path.expanduser('~'), 'Documents', 'push-repos.txt')
@@ -10,7 +12,7 @@ class ReposFiles:
         self.csvHandler = CsvHandler()
         self.exclude_dirs = self.csvHandler.getExcludeDirs()
         self.exclude_for_pull = self.csvHandler.getExcludeForPull()
-        delete_files = input("[green]Do you want to delete the files? (y/n): ")
+        delete_files = console.input("[green]Do you want to delete the files? (y/n): ")
         if delete_files.lower() == 'y':
             self.deleteFiles()
             self.reposeWriteToFile(self.PUSH_FILE, self.exclude_dirs)
