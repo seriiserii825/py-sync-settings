@@ -12,7 +12,7 @@ console = Console()
 def menu():
     args = sys.argv
     args_str = ''
-
+# get args
     if len(args) > 1:
         for i in range(1, len(args)):
             args_str += args[i] + ' '
