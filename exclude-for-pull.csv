@@ -1,5 +1,6 @@
 mjml
 Local Sites
+Local-Sites
 .cache
 nuxt
 laravel
@@ -9,3 +10,5 @@ react
 .tmux
 .local
 snapd
+docker
+/home/serii/Documents/docker
