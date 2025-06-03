@@ -13,4 +13,3 @@ mysql
 .local/share
 .tmux
 snapd
-docker
