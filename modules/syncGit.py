@@ -20,7 +20,6 @@ def syncGit():
         ["1) [blue]push[/]", "Push changes to the remote repository."],
         ["2) [red]pull[/]", "Pull changes from the remote repository."],
         ["3) [green]commits_all[/]", "Push changes to the remote repository."],
-        ["4) [blue]commits_projects[/]", "Push changes to the remote repository."],
     ]
     richTable(table_title, table_columns, table_rows)
     action = console.input("[cyan]What would you like to do? ")
@@ -30,8 +29,6 @@ def syncGit():
         gitPullAll(file_pull)
     elif action == "3":
         getCommits(file_push)
-    elif action == "4":
-        getCommits(file_push, projects=True)
     else:
         console.print("[red]Invalid option. Please try again.")
         exit()
