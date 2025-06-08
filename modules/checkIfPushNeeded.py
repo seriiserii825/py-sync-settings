@@ -1,5 +1,5 @@
-import os
 import git
+
 
 def checkIfPushNeeded():
     # if exists .gpgrc and it's not empty

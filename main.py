@@ -9,6 +9,7 @@ from modules.syncGit import syncGit
 
 console = Console()
 
+
 def menu():
     args = sys.argv
     args_str = ''
@@ -44,4 +45,6 @@ def menu():
         os.system(command)
     else:
         gitPush(commit_message)
+
+
 menu()
