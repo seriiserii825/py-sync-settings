@@ -9,5 +9,6 @@ html
 react
 .tmux
 .local
+.local/state/yazi
 snapd
 docker
