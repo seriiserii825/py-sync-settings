@@ -1,6 +1,7 @@
-from rich.table import Table
 from rich.console import Console
 from rich.prompt import Prompt
+from rich.table import Table
+
 
 def tableMenu():
     table = Table(title="Star Wars Movies", row_styles=["none", "dim"])

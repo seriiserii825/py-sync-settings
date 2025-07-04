@@ -1,6 +1,8 @@
 import os
 import sys
+
 from rich.console import Console
+
 from libs.richTable import richTable
 from modules.gitClone import gitClone
 from modules.gitPull import gitPull
@@ -12,14 +14,14 @@ console = Console()
 
 def menu():
     args = sys.argv
-    args_str = ''
-# get args
+    args_str = ""
+    # get args
     if len(args) > 1:
         for i in range(1, len(args)):
-            args_str += args[i] + ' '
-        commit_message = args_str if args_str != '' else ''
+            args_str += args[i] + " "
+        commit_message = args_str if args_str != "" else ""
     else:
-        commit_message = ''
+        commit_message = ""
 
     table_title = "Choose an option"
     table_columns = ["Option", "Description"]

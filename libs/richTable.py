@@ -1,6 +1,7 @@
 from rich.console import Console
 from rich.table import Table
 
+
 def richTable(title, columns, rows):
     table = Table(title=title)
 
@@ -11,5 +12,3 @@ def richTable(title, columns, rows):
 
     console = Console()
     console.print(table)
-    
-

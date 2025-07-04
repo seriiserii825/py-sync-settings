@@ -1,4 +1,5 @@
 import os
+
 from rich.console import Console
 
 from classes.ReposFiles import ReposFiles
@@ -8,12 +9,11 @@ from modules.gitPullAll import gitPullAll
 from modules.gitPushAll import gitPushAll
 
 
-
 def syncGit():
     console = Console()
     ReposFiles()
-    file_push = os.path.join(os.path.expanduser('~'), 'Documents', 'push-repos.txt')
-    file_pull = os.path.join(os.path.expanduser('~'), 'Documents', 'pull-repos.txt')
+    file_push = os.path.join(os.path.expanduser("~"), "Documents", "push-repos.txt")
+    file_pull = os.path.join(os.path.expanduser("~"), "Documents", "pull-repos.txt")
     table_title = "Git Repository Manager"
     table_columns = ["Option", "Description"]
     table_rows = [

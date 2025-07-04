@@ -1,22 +1,29 @@
 import os
 import subprocess
+
 from rich import print
-from classes.CsvHandler import CsvHandler
 from rich.console import Console
+
+from classes.CsvHandler import CsvHandler
+
 console = Console()
 
+
 class ReposFiles:
-    PUSH_FILE = os.path.join(os.path.expanduser('~'), 'Documents', 'push-repos.txt')
-    PUT_FILE = os.path.join(os.path.expanduser('~'), 'Documents', 'pull-repos.txt')
+    PUSH_FILE = os.path.join(os.path.expanduser("~"), "Documents", "push-repos.txt")
+    PUT_FILE = os.path.join(os.path.expanduser("~"), "Documents", "pull-repos.txt")
+
     def __init__(self):
         self.csvHandler = CsvHandler()
         self.exclude_dirs = self.csvHandler.getExcludeDirs()
         self.exclude_for_pull = self.csvHandler.getExcludeForPull()
         delete_files = console.input("[green]Do you want to delete the files? (y/n): ")
-        if delete_files.lower() == 'y':
+        if delete_files.lower() == "y":
             self.deleteFiles()
             self.reposeWriteToFile(self.PUSH_FILE, self.exclude_dirs)
-            self.reposeWriteToFile(self.PUT_FILE, self.exclude_for_pull + self.exclude_dirs)
+            self.reposeWriteToFile(
+                self.PUT_FILE, self.exclude_for_pull + self.exclude_dirs
+            )
         else:
             print("[red]Files not deleted.")
 
@@ -25,7 +32,16 @@ class ReposFiles:
 
     def reposeWriteToFile(self, file_path, exclude_dirs):
         # Build the find command with exclusions
-        base_command = ["find", os.path.expanduser("~"), "-maxdepth", "8", "-name", ".git", "-type", "d"]
+        base_command = [
+            "find",
+            os.path.expanduser("~"),
+            "-maxdepth",
+            "8",
+            "-name",
+            ".git",
+            "-type",
+            "d",
+        ]
         # pprint(exclude_dirs)
         for exclude in exclude_dirs:
             base_command.extend(["-not", "-path", f"*/{exclude}/*"])
@@ -41,5 +57,5 @@ class ReposFiles:
             file.write("\n".join(filtered_paths))
 
         # file lines count
-        print(f'[blue]Total repos found: {len(filtered_paths)}')
+        print(f"[blue]Total repos found: {len(filtered_paths)}")
         # os.system(f"bat {file_push}")

@@ -5,8 +5,10 @@ from rich.panel import Panel
 
 from modules.checkIfPullNeeded import checkIfPullNeeded
 from modules.gitPull import gitPull
+
+
 def gitPullAll(file_path):
-    with open(file_path, 'r') as f:
+    with open(file_path, "r") as f:
         for line in f:
             line = line.strip()
             os.chdir(line)

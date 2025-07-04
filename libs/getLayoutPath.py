@@ -2,11 +2,7 @@ import os
 
 
 def getLayoutPath(name):
-    ROOT_DIR = os.path.dirname(
-        os.path.dirname(
-            os.path.abspath(__file__)
-        )
-    )
+    ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
     if name == "vue":
         return f"{ROOT_DIR}/layouts/layout.vue"
     elif name == "scss":
@@ -20,4 +16,4 @@ def getLayoutPath(name):
     elif name == "store":
         return f"{ROOT_DIR}/layouts/layout.store.ts"
     else:
-        exit('Invalid layout name')
+        exit("Invalid layout name")

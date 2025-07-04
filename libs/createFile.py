@@ -1,9 +1,13 @@
 import os
+
 from pyfzf.pyfzf import FzfPrompt
 from rich import print
 from rich.console import Console
+
 console = Console()
 fzf = FzfPrompt()
+
+
 def createFile(basepath, ext, placeholder=None):
     files = []
     with os.scandir(basepath) as entries:
