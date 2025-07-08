@@ -34,8 +34,7 @@ def pushChanges(commit_message_param=""):
         if commit_message == "":
             print("[red]Commit message is required")
             gitPush()
-        git_command = f'git add . && git commit -m "{commands[choose]}:\
-                {commit_message}" && git push'
+        git_command = f'git add . && git commit -m "{commands[choose]}: {commit_message}" && git push'
         os.system(git_command)
         print("[green]Done")
         decryptFiles()
