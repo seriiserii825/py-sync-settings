@@ -31,7 +31,7 @@ class ReposFiles:
         os.system(f"rm {self.PUSH_FILE} {self.PUT_FILE}")
 
     def reposeWriteToFile(self, file_path, exclude_dirs):
-        # Build the find command with exclusions
+        # Build the find command with eHkkxclusions
         base_command = [
             "find",
             os.path.expanduser("~"),
@@ -59,3 +59,11 @@ class ReposFiles:
         # file lines count
         print(f"[blue]Total repos found: {len(filtered_paths)}")
         # os.system(f"bat {file_push}")
+
+    def getPullFileRows(self):
+        with open(self.PUT_FILE, "r") as file:
+            rows = file.readlines()
+        return [row.strip() for row in rows]
+
+    def get_exclude_for_pull_rows(self):
+        return self.exclude_for_pull
