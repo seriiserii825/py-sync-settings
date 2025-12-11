@@ -17,7 +17,7 @@ def gitPullAll(file_path):
             if git.has_changes():
                 print_repo()
                 print(
-                    "[yellow]Uncommitted changes detected. Please commit or stash them before pulling.[/yellow]"
+                    "[yellow]Uncommitted changes detected. [/yellow]"
                 )
                 continue
             elif git.needs_pull():
