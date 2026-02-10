@@ -2,3 +2,4 @@
 /home/serii/Documents/python/py-sync-settings/
 /home/serii/Documents/Knowledge-base_/
 /home/serii/Documents/bash/
+/home/serii/Documents/python/py-scss/
