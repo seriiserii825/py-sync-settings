@@ -4,6 +4,7 @@ from rich import print
 from rich.panel import Panel
 from rich.prompt import Prompt
 
+from libs.appendToFile import appendToFile
 from modules.checkForGitDir import checkForGitDir
 from modules.checkIfPushNeeded import checkIfPushNeeded
 from utils.decryptFiles import decryptFiles
@@ -11,6 +12,11 @@ from utils.encryptFiles import encryptFiles
 from utils.tableMenu import tableMenu
 
 user = os.getlogin()
+
+project_root = os.path.dirname(
+    os.path.dirname(os.path.abspath(__file__))
+)
+changed_file = os.path.join(project_root, "changed-repos.txt")
 
 commands = {
     "1": "feat",
@@ -39,6 +45,7 @@ def pushChanges(commit_message_param=""):
         git_command += " && git push"
         os.system(git_command)
         os.system(git_command)
+        appendToFile(changed_file, os.getcwd())
         print("[green]Done")
         decryptFiles()
     else:
