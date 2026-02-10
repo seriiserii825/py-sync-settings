@@ -24,9 +24,9 @@ def syncGit():
         project_root, "changed-repos.txt"
     )
     table_rows = [
-        ["1) [blue]push[/]",
+        ["1) [blue]push all[/]",
          "Push changes to the remote repository."],
-        ["2) [red]pull[/]",
+        ["2) [red]pull all[/]",
          "Pull changes from the remote repository."],
         ["3) [green]commits_all[/]",
          "Push changes to the remote repository."],
