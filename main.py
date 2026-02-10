@@ -31,6 +31,7 @@ def menu():
         ["[yellow]3) Sync[/]", "Sync all repositories."],
         ["[green]4) Clone[/]", "Clone"],
         ["[red]5) Remove Sync files[/]", "Remove sync files."],
+        ["[red]6) Exit[/]", "Exit the program."],
     ]
     richTable(table_title, table_columns, table_rows)
     action = console.input("[cyan]What would you like to do? ")
@@ -43,8 +44,12 @@ def menu():
     elif action == "4":
         gitClone()
     elif action == "5":
-        command = "rm -rf ~/Documents/push-repos.txt ~/Documents/pull-repos.txt"
+        docs = os.path.expanduser("~/Documents")
+        command = f"rm -rf {docs}/push-repos.txt {docs}/pull-repos.txt"
         os.system(command)
+    elif action == "6":
+        console.print("[red]Bye")
+        exit()
     else:
         gitPush(commit_message)
 
