@@ -14,8 +14,6 @@ changed_file = os.path.join(project_root, "changed-repos.txt")
 
 def gitPushAll(file_path):
     print("[blue]Pushing")
-    if os.path.exists(changed_file):
-        os.remove(changed_file)
     with open(file_path, "r") as f:
         for line in f:
             line = line.strip()
