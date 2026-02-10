@@ -1,1 +1,4 @@
 /home/serii/Documents/laravel/lv-educore/
+/home/serii/Documents/python/py-sync-settings/
+/home/serii/Documents/Knowledge-base_/
+/home/serii/Documents/bash/
