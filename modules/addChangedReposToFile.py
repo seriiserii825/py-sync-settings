@@ -11,7 +11,6 @@ changed_file = os.path.join(project_root, "changed-repos.txt")
 
 def addChangedReposToFile(file_path):
     today_projects = getTodayProjects(file_path)
-    print(f"{today_projects}: today_projects")
     for project in today_projects:
         os.chdir(project)
         cwd = os.getcwd()
