@@ -1,2 +1,4 @@
-/home/serii/Documents/Knowledge-base_
-/home/serii/Documents/bash
+
+/home/serii/Local Sites/lc-meridiana/app/public/wp-content/themes/bs-meridiana
+/home/serii/Documents/chrome-extensions/tabs-copy
+/home/serii/dotfiles/.config/nvim
