@@ -5,6 +5,7 @@ from rich.panel import Panel
 from rich.prompt import Prompt
 
 from classes.ReposFiles import ReposFiles
+from libs.hasInFile import hasInFile
 from libs.appendToFile import appendToFile
 from modules.checkForGitDir import checkForGitDir
 from modules.checkIfPushNeeded import checkIfPushNeeded
@@ -53,7 +54,11 @@ def pushChanges(commit_message_param=""):
         os.system(git_command)
         cwd = os.getcwd()
         excluded_dirs = getExcludedDirs()
-        if (cwd not in excluded_dirs) and ("py-sync-settings" not in cwd):
+        if (
+            (cwd not in excluded_dirs)
+            and ("py-sync-settings" not in cwd)
+            and not hasInFile(changed_file, cwd)
+        ):
             appendToFile(changed_file, cwd)
         print("[green]Done")
         decryptFiles()
