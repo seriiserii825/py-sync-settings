@@ -10,8 +10,7 @@ from modules.getLocalProjects import getLocalProjects
 from modules.gitCommitToBuffer import gitCommitToBuffer
 
 
-def getCommits(file_path, projects=False):
-    today_projects = []
+def getTodayProjects(file_path, projects=False):
     lines = []
     with open(file_path, "r") as f:
         for line in f:
@@ -19,10 +18,10 @@ def getCommits(file_path, projects=False):
             lines.append(line)
     if projects:
         lines = getLocalProjects(lines)
+    today_date = datetime.today().strftime("%Y-%m-%d")
+    today_projects = []
     for line in lines:
         os.chdir(line)
-        today_date = datetime.today().strftime("%Y-%m-%d")
-        # show user, time when commit was done, and commit message
         command = [
             "git",
             "log",
@@ -31,10 +30,25 @@ def getCommits(file_path, projects=False):
             "--pretty=format:%an: %cd: %s",
         ]
         result = subprocess.run(command, capture_output=True, text=True)
-
         if result.stdout:
             today_projects.append(line)
-            # color result.stdout
+    return today_projects
+
+
+def getCommits(file_path, projects=False):
+    today_projects = getTodayProjects(file_path, projects)
+    for line in today_projects:
+        os.chdir(line)
+        today_date = datetime.today().strftime("%Y-%m-%d")
+        command = [
+            "git",
+            "log",
+            f"--since={today_date} 00:00:00",
+            f"--until={today_date} 23:59:59",
+            "--pretty=format:%an: %cd: %s",
+        ]
+        result = subprocess.run(command, capture_output=True, text=True)
+        if result.stdout:
             print(Panel(f"[green]{result.stdout}", title=line))
     copy_to_buffer = input(
         "Would you like to copy the commits to the clipboard? [y/n] "

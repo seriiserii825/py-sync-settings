@@ -5,8 +5,6 @@ from rich.panel import Panel
 from rich.prompt import Prompt
 
 from classes.ReposFiles import ReposFiles
-from libs.hasInFile import hasInFile
-from libs.appendToFile import appendToFile
 from modules.checkForGitDir import checkForGitDir
 from modules.checkIfPushNeeded import checkIfPushNeeded
 from utils.decryptFiles import decryptFiles
@@ -16,7 +14,6 @@ from utils.tableMenu import tableMenu
 user = os.getlogin()
 
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-changed_file = os.path.join(project_root, "changed-repos.txt")
 
 commands = {
     "1": "feat",
@@ -52,14 +49,6 @@ def pushChanges(commit_message_param=""):
         git_command += f' && git commit -m "{commands[choose]}: {commit_message}"'
         git_command += " && git push"
         os.system(git_command)
-        cwd = os.getcwd()
-        excluded_dirs = getExcludedDirs()
-        if (
-            (cwd not in excluded_dirs)
-            and ("py-sync-settings" not in cwd)
-            and not hasInFile(changed_file, cwd)
-        ):
-            appendToFile(changed_file, cwd)
         print("[green]Done")
         decryptFiles()
     else:

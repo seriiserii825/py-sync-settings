@@ -5,6 +5,7 @@ from rich.console import Console
 from classes.Command import Command
 from classes.ReposFiles import ReposFiles
 from libs.richTable import richTable
+from modules.addChangedReposToFile import addChangedReposToFile
 from modules.getCommits import getCommits
 from modules.gitPullAll import gitPullAll
 from modules.gitPushAll import gitPushAll
@@ -27,6 +28,7 @@ def syncGit():
         ["3) [green]commits_all[/]", "Push changes to the remote repository."],
         ["4) [yellow]pull_changed[/]", "Pull only repos changed in last push."],
         ["5) [magenta]clear_changed[/]", "Clear changed-repos.txt."],
+        ["6) [green]repos_to_changed_repos[/]", "Copy repos to changed-repos.txt."],
     ]
     richTable(table_title, table_columns, table_rows)
     action = console.input("[cyan]What would you like to do? ")
@@ -48,6 +50,8 @@ def syncGit():
             console.print("[green]changed-repos.txt empty.")
         else:
             console.print("[red]No changed-repos.txt to make empty.")
+    elif action == "6":
+        addChangedReposToFile(file_push)
     else:
         console.print("[red]Invalid option. Please try again.")
         exit()
