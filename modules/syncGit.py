@@ -12,7 +12,8 @@ from modules.gitPushAll import gitPushAll
 
 def syncGit():
     console = Console()
-    ReposFiles()
+    repos_files = ReposFiles()
+    repos_files.deleteFiles()
     docs = os.path.join(os.path.expanduser("~"), "Documents")
     file_push = os.path.join(docs, "push-repos.txt")
     file_pull = os.path.join(docs, "pull-repos.txt")

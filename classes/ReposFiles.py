@@ -17,18 +17,17 @@ class ReposFiles:
         self.csvHandler = CsvHandler()
         self.exclude_dirs = self.csvHandler.getExcludeDirs()
         self.exclude_for_pull = self.csvHandler.getExcludeForPull()
+
+    def deleteFiles(self):
         delete_files = console.input("[green]Do you want to delete the files? (y/n): ")
         if delete_files.lower() == "y":
-            self.deleteFiles()
+            os.system(f"rm {self.PUSH_FILE} {self.PUT_FILE}")
             self.reposeWriteToFile(self.PUSH_FILE, self.exclude_dirs)
             self.reposeWriteToFile(
                 self.PUT_FILE, self.exclude_for_pull + self.exclude_dirs
             )
         else:
             print("[red]Files not deleted.")
-
-    def deleteFiles(self):
-        os.system(f"rm {self.PUSH_FILE} {self.PUT_FILE}")
 
     def reposeWriteToFile(self, file_path, exclude_dirs):
         # Build the find command with exclusions
