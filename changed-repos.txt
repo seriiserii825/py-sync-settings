@@ -1,5 +1,1 @@
-/home/serii/dotfiles/.config/nvim
-/home/serii/Documents/bash
-/home/serii/Documents/chrome-extensions/tabs-copy
-/home/serii/Documents/Knowledge-base_
-/home/serii/Documents/python/py-scss
+
