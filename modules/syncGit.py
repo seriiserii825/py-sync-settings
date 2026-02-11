@@ -2,6 +2,7 @@ import os
 
 from rich.console import Console
 
+from classes.Command import Command
 from classes.ReposFiles import ReposFiles
 from libs.richTable import richTable
 from modules.getCommits import getCommits
@@ -17,28 +18,17 @@ def syncGit():
     file_pull = os.path.join(docs, "pull-repos.txt")
     table_title = "Git Repository Manager"
     table_columns = ["Option", "Description"]
-    project_root = os.path.dirname(os.path.dirname(
-        os.path.abspath(__file__)
-    ))
-    file_changed = os.path.join(
-        project_root, "changed-repos.txt"
-    )
+    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    file_changed = os.path.join(project_root, "changed-repos.txt")
     table_rows = [
-        ["1) [blue]push all[/]",
-         "Push changes to the remote repository."],
-        ["2) [red]pull all[/]",
-         "Pull changes from the remote repository."],
-        ["3) [green]commits_all[/]",
-         "Push changes to the remote repository."],
-        ["4) [yellow]pull_changed[/]",
-         "Pull only repos changed in last push."],
-        ["5) [magenta]clear_changed[/]",
-         "Delete changed-repos.txt."],
+        ["1) [blue]push all[/]", "Push changes to the remote repository."],
+        ["2) [red]pull all[/]", "Pull changes from the remote repository."],
+        ["3) [green]commits_all[/]", "Push changes to the remote repository."],
+        ["4) [yellow]pull_changed[/]", "Pull only repos changed in last push."],
+        ["5) [magenta]clear_changed[/]", "Clear changed-repos.txt."],
     ]
     richTable(table_title, table_columns, table_rows)
-    action = console.input(
-        "[cyan]What would you like to do? "
-    )
+    action = console.input("[cyan]What would you like to do? ")
     if action == "1":
         gitPushAll(file_push)
     elif action == "2":
@@ -52,10 +42,11 @@ def syncGit():
             console.print("[red]No changed-repos.txt found. Push first.")
     elif action == "5":
         if os.path.exists(file_changed):
-            os.remove(file_changed)
-            console.print("[green]changed-repos.txt deleted.")
+            # make file empty
+            Command.run_quiet(f"echo '' > {file_changed}")
+            console.print("[green]changed-repos.txt empty.")
         else:
-            console.print("[red]No changed-repos.txt to delete.")
+            console.print("[red]No changed-repos.txt to make empty.")
     else:
         console.print("[red]Invalid option. Please try again.")
         exit()
