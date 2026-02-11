@@ -27,8 +27,8 @@ def syncGit():
         ["2) [red]pull all[/]", "Pull changes from the remote repository."],
         ["3) [green]commits_all[/]", "Push changes to the remote repository."],
         ["4) [yellow]pull_changed[/]", "Pull only repos changed in last push."],
-        ["5) [magenta]clear_changed[/]", "Clear changed-repos.txt."],
-        ["6) [green]repos_to_changed_repos[/]", "Copy repos to changed-repos.txt."],
+        ["5) [green]repos_to_changed_repos[/]", "Copy repos to changed-repos.txt."],
+        ["6) [magenta]clear_changed[/]", "Clear changed-repos.txt."],
     ]
     richTable(table_title, table_columns, table_rows)
     action = console.input("[cyan]What would you like to do? ")
@@ -44,14 +44,14 @@ def syncGit():
         else:
             console.print("[red]No changed-repos.txt found. Push first.")
     elif action == "5":
+        addChangedReposToFile(file_push)
+    elif action == "6":
         if os.path.exists(file_changed):
             # make file empty
             Command.run_quiet(f"echo '' > {file_changed}")
             console.print("[green]changed-repos.txt empty.")
         else:
             console.print("[red]No changed-repos.txt to make empty.")
-    elif action == "6":
-        addChangedReposToFile(file_push)
     else:
         console.print("[red]Invalid option. Please try again.")
         exit()
