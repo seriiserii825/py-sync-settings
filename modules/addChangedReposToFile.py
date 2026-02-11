@@ -11,12 +11,13 @@ changed_file = os.path.join(project_root, "changed-repos.txt")
 
 def addChangedReposToFile(file_path):
     today_projects = getTodayProjects(file_path)
+    excluded_dirs = getExcludedDirs()
     for project in today_projects:
         os.chdir(project)
         cwd = os.getcwd()
-        excluded_dirs = getExcludedDirs()
+        is_excluded = any(excluded in cwd for excluded in excluded_dirs)
         if (
-            (cwd not in excluded_dirs)
+            not is_excluded
             and ("py-sync-settings" not in cwd)
             and not hasInFile(changed_file, cwd)
         ):
