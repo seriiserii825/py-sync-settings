@@ -1,2 +1,3 @@
 
 /home/serii/Documents/python/py-sync-settings
+/home/serii/Documents/python/py-sync-settings
