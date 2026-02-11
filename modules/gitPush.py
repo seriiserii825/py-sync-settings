@@ -51,10 +51,10 @@ def pushChanges(commit_message_param=""):
         git_command += f' && git commit -m "{commands[choose]}: {commit_message}"'
         git_command += " && git push"
         os.system(git_command)
-        os.system(git_command)
+        cwd = os.getcwd()
         excluded_dirs = getExcludedDirs()
-        if os.getcwd() not in excluded_dirs or "py-sync-settings" not in os.getcwd():
-            appendToFile(changed_file, os.getcwd())
+        if (cwd not in excluded_dirs) and ("py-sync-settings" not in cwd):
+            appendToFile(changed_file, cwd)
         print("[green]Done")
         decryptFiles()
     else:
