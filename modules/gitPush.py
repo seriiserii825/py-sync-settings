@@ -4,6 +4,7 @@ from rich import print
 from rich.panel import Panel
 from rich.prompt import Prompt
 
+from classes.ReposFiles import ReposFiles
 from libs.appendToFile import appendToFile
 from modules.checkForGitDir import checkForGitDir
 from modules.checkIfPushNeeded import checkIfPushNeeded
@@ -13,9 +14,7 @@ from utils.tableMenu import tableMenu
 
 user = os.getlogin()
 
-project_root = os.path.dirname(
-    os.path.dirname(os.path.abspath(__file__))
-)
+project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 changed_file = os.path.join(project_root, "changed-repos.txt")
 
 commands = {
@@ -25,6 +24,14 @@ commands = {
     "4": "fix",
     "5": "core",
 }
+
+
+def getExcludedDirs():
+    repos_files = ReposFiles()
+    exclude_dirs = repos_files.exclude_dirs
+    exclude_for_pull = repos_files.exclude_for_pull
+    total_exclude = exclude_dirs + exclude_for_pull
+    return total_exclude
 
 
 def pushChanges(commit_message_param=""):
@@ -45,7 +52,9 @@ def pushChanges(commit_message_param=""):
         git_command += " && git push"
         os.system(git_command)
         os.system(git_command)
-        appendToFile(changed_file, os.getcwd())
+        excluded_dirs = getExcludedDirs()
+        if os.getcwd() not in excluded_dirs or "py-sync-settings" not in os.getcwd():
+            appendToFile(changed_file, os.getcwd())
         print("[green]Done")
         decryptFiles()
     else:
