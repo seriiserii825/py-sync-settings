@@ -1,1 +1,4 @@
 
+/home/serii/dotfiles/.config/nvim
+/home/serii/Documents/Knowledge-base_
+/home/serii/Documents/python/py-wp
