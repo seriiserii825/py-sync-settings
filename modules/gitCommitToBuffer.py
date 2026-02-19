@@ -2,7 +2,7 @@ from datetime import datetime
 
 import git
 
-from libs.buffer import addToClipBoard
+from libs.buffer import addToClipboardFile
 
 
 def gitCommitToBuffer():
@@ -16,13 +16,14 @@ def gitCommitToBuffer():
     commits = repo.iter_commits(since=since_time, reverse=True)
 
     # Collect commit messages
-    commit_messages = [commit.message.strip() for commit in commits]
+    commit_messages = [str(commit.message).strip() for commit in commits]
     # remove feat: from commit_messages
     clear_messages = []
     for message in commit_messages:
-        clear_messages.append(message.replace("feat:", ""))
+        cleared_message = message.replace("feat: ", "")
+        clear_messages.append(cleared_message)
 
     # Print the commit messages
     print("Commit messages since 3am:")
     message_text = "\n".join(clear_messages)
-    addToClipBoard(message_text)
+    addToClipboardFile(message_text)

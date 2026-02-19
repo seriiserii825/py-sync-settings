@@ -1,11 +1,12 @@
 import os
 import subprocess
 
+from libs.buffer import getFromClipboard
+
 
 def gitClone():
-    clipboard = subprocess.check_output(
-        "xclip -o -selection clipboard", shell=True, text=True
-    ).strip()
+    clipboard = getFromClipboard()
+
     urls = ("github.com", "bitbucket.org", "gitlab.com", "repo clone")
     if any(url in clipboard for url in urls):
         print(clipboard)
