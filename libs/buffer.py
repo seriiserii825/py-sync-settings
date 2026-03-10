@@ -1,5 +1,6 @@
 import os
 import subprocess
+import warnings
 
 import plyer
 import pyperclip
@@ -34,12 +35,14 @@ def addToClipboard(text: str):
     except Exception:
         pyperclip.copy(text)
 
-    plyer.notification.notify(
-        title="Buffer",
-        message=text,
-        app_name="Buffer",
-        timeout=5
-    )
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore", UserWarning)
+        plyer.notification.notify(
+            title="Buffer",
+            message=text,
+            app_name="Buffer",
+            timeout=5
+        )
 
 
 def addToClipboardFile(file: str):
