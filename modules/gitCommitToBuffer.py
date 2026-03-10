@@ -2,7 +2,7 @@ from datetime import datetime
 
 import git
 
-from libs.buffer import addToClipboardFile
+from libs.buffer import addToClipboard
 
 
 def gitCommitToBuffer():
@@ -26,4 +26,4 @@ def gitCommitToBuffer():
     # Print the commit messages
     print("Commit messages since 3am:")
     message_text = "\n".join(clear_messages)
-    addToClipboardFile(message_text)
+    addToClipboard(message_text)
