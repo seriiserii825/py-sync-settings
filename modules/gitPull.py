@@ -39,6 +39,8 @@ def gitPull():
         result = checkIfPullNeeded()
         if result:
             exit_code = os.system("git pull")
-            decryptFiles()
-            return exit_code == 0
+            if exit_code != 0:
+                return False
+        decryptFiles()
+        return True
     return True
