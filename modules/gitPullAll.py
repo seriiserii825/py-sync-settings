@@ -13,6 +13,7 @@ FAILED_LOG = os.path.expanduser("~/Downloads/pull-failed.txt")
 
 def gitPullAll(file_path):
     failed = []
+    changed = []
     total = 0
     with open(file_path, "r") as f:
         for line in f:
@@ -33,6 +34,8 @@ def gitPullAll(file_path):
                 if success is False:
                     failed.append(line)
                     _notify_fail(line)
+                else:
+                    changed.append(line)
 
     success_count = total - len(failed)
     failed_count = len(failed)
@@ -45,9 +48,23 @@ def gitPullAll(file_path):
                 log.write(f"{repo}\n")
         print(f"[red]Failed repos written to {FAILED_LOG}")
 
+    summary_lines = [
+        f"[green]Success: {success_count}[/green]  [red]Failed: {failed_count}[/red]  Total: {total}"
+    ]
+
+    if changed:
+        summary_lines.append("\n[bold]Changed repos:[/bold]")
+        for repo in changed:
+            summary_lines.append(f"  [cyan]{os.path.basename(repo.rstrip('/'))}[/cyan]  [dim]{repo}[/dim]")
+
+    if failed_count > 0:
+        summary_lines.append("\n[bold]Failed repos:[/bold]")
+        for repo in failed:
+            summary_lines.append(f"  [red]{os.path.basename(repo.rstrip('/'))}[/red]  [dim]{repo}[/dim]")
+
     summary_color = "green" if failed_count == 0 else "yellow"
     print(Panel(
-        f"[green]Success: {success_count}[/green]  [red]Failed: {failed_count}[/red]  Total: {total}",
+        "\n".join(summary_lines),
         title="Pull Summary",
         style=summary_color,
     ))
