@@ -31,7 +31,7 @@ def encryptFiles():
                     removeFileFromGitCache(file_path=file_without_gpg)
                     addToGitIgnore(file_without_gpg)
                     file_without_gpg = line.replace(".gpg", "")
-                    passwords_dir = os.path.expanduser("~/.passwords")
+                    passwords_dir = os.path.expanduser("~/.password-store")
                     recipient = os.getlogin() if os.getcwd() == passwords_dir else "blueline"
                     os.system(f"gpg -e -r {recipient} {file_without_gpg}")
                 except Exception as e:
