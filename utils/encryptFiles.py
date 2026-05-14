@@ -4,8 +4,6 @@ from rich import print
 
 from modules.removeFileFromGitCache import removeFileFromGitCache
 
-user = os.getlogin()
-
 
 def addToGitIgnore(filename):
     with open(".gitignore", "r") as file:
@@ -33,7 +31,9 @@ def encryptFiles():
                     removeFileFromGitCache(file_path=file_without_gpg)
                     addToGitIgnore(file_without_gpg)
                     file_without_gpg = line.replace(".gpg", "")
-                    os.system(f"gpg -e -r {user} {file_without_gpg}")
+                    passwords_dir = os.path.expanduser("~/.passwords")
+                    recipient = os.getlogin() if os.getcwd() == passwords_dir else "blueline"
+                    os.system(f"gpg -e -r {recipient} {file_without_gpg}")
                 except Exception as e:
                     print(f"[red]Error encrypting file: {line}")
                     print(e)
