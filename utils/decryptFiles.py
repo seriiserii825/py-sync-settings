@@ -1,9 +1,8 @@
 import os
+import subprocess
 
 from rich import print
 from rich.panel import Panel
-
-user = os.getlogin()
 
 
 def decryptFiles():
@@ -12,12 +11,14 @@ def decryptFiles():
         with open(".gpgrc", "r") as file:
             lines = file.readlines()
             for line in lines:
-                line = line.replace("\n", "")
+                line = line.strip()
                 print(Panel(f"[blue]decrypt line: {line}"))
                 file_without_gpg = line.replace(".gpg", "")
-                if os.path.isfile(file_without_gpg):
-                    os.system(f"rm {file_without_gpg}")
-                if os.path.isfile(line):
-                    os.system(f"gpg -d {line} > {file_without_gpg}")
-                else:
+                if not os.path.isfile(line):
                     print(f"[red]GPG file not found: {line}")
+                    continue
+                result = subprocess.run(
+                    ["gpg", "--output", file_without_gpg, "--yes", "--decrypt", line]
+                )
+                if result.returncode != 0:
+                    print(f"[red]Failed to decrypt: {line}")
