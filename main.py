@@ -14,6 +14,11 @@ console = Console()
 
 def menu():
     args = sys.argv
+
+    if len(args) > 1 and args[1] == "pull":
+        gitPull()
+        return
+
     args_str = ""
     # get args
     if len(args) > 1:
