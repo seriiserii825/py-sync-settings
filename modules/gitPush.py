@@ -6,6 +6,7 @@ from rich.prompt import Prompt
 
 from classes.ReposFiles import ReposFiles
 from modules.checkForGitDir import checkForGitDir
+from modules.checkIfPullNeeded import checkIfPullNeeded
 from modules.checkIfPushNeeded import checkIfPushNeeded
 from utils.decryptFiles import decryptFiles
 from utils.encryptFiles import encryptFiles
@@ -93,6 +94,9 @@ def gitPush(commit_message=""):
     if checkForGitDir():
         os.system("git status")
         gitModules()
+        if checkIfPullNeeded():
+            print("[red]Pull needed. Run git pull first.")
+            return
         if os.path.exists(".gpgrc"):
             encryptFiles()
             if checkIfPushNeeded():
