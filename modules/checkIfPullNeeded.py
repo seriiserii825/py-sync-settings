@@ -27,9 +27,15 @@ def checkIfPullNeeded():
         print("[red]Error getting the remote commit hash.")
         return False
 
-    if local_commit == remote_commit:
-        print("[red]Your branch is up to date with the remote.")
+    try:
+        behind = subprocess.check_output(["git", "rev-list", "HEAD..@{u}", "--count"]).strip()
+    except subprocess.CalledProcessError:
+        print("[red]Error checking behind count.")
         return False
-    else:
+
+    if int(behind) > 0:
         print("[green]Pull needed. Your branch is behind the remote.")
         return True
+    else:
+        print("[red]Your branch is up to date with the remote.")
+        return False
