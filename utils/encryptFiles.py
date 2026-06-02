@@ -34,6 +34,22 @@ def addToGitIgnore(filename):
             file.write(f"{filename}\n")
 
 
+def _encrypt_folder(line, recipient):
+    zip_path = line.replace(".gpg", "")       # http.zip
+    folder_name = zip_path.replace(".zip", "") # http
+    if not os.path.isdir(folder_name):
+        print(f"[red]Folder not found: {folder_name}")
+        return
+    if os.path.isfile(line):
+        os.system(f"rm {line}")
+    os.system(f"zip -r {zip_path} {folder_name}")
+    os.system(f"gpg -e -r {recipient} {zip_path}")
+    os.system(f"rm {zip_path}")
+    addToGitIgnore(folder_name)
+    removeFileFromGitCache(file_path=folder_name)
+    print(f"[green]Folder {folder_name} encrypted → {line}")
+
+
 def encryptFiles():
     if os.path.isfile(".gpgrc"):
         print("[green]Encrypting files")
@@ -44,13 +60,15 @@ def encryptFiles():
                 try:
                     line = line.replace("\n", "")
                     print(f"line: {line}")
+                    if line.endswith(".zip.gpg"):
+                        _encrypt_folder(line, recipient)
+                        continue
                     file_without_gpg = line.replace(".gpg", "")
                     print(f"file_without_gpg: {file_without_gpg}")
                     if os.path.isfile(line):
                         os.system(f"rm {line}")
                     removeFileFromGitCache(file_path=file_without_gpg)
                     addToGitIgnore(file_without_gpg)
-                    file_without_gpg = line.replace(".gpg", "")
                     os.system(f"gpg -e -r {recipient} {file_without_gpg}")
                 except Exception as e:
                     print(f"[red]Error encrypting file: {line}")
