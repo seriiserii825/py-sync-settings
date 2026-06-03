@@ -9,9 +9,31 @@ from modules.checkIfPullNeeded import checkIfPullNeeded
 from modules.gitPull import gitPull
 
 FAILED_LOG = os.path.expanduser("~/Downloads/pull-failed.txt")
+BASH_GITA_DIR = os.path.expanduser("~/Documents/bash-gita")
+NEED_PULL_FILE = os.path.join(BASH_GITA_DIR, "need-pull.txt")
 
 
 def gitPullAll(file_path):
+    if (
+        os.path.isdir(BASH_GITA_DIR)
+        and os.path.isfile(NEED_PULL_FILE)
+        and os.path.getsize(NEED_PULL_FILE) > 0
+    ):
+        file_path = NEED_PULL_FILE
+        print(
+            Panel(
+                f"Mode: [bold cyan]need-pull.txt[/bold cyan]  →  {NEED_PULL_FILE}",
+                style="cyan",
+            )
+        )
+    else:
+        print(
+            Panel(
+                f"Mode: [bold yellow]all repos[/bold yellow]  →  {file_path}",
+                style="yellow",
+            )
+        )
+
     failed = []
     changed = []
     total = 0
@@ -55,22 +77,33 @@ def gitPullAll(file_path):
     if changed:
         summary_lines.append("\n[bold]Changed repos:[/bold]")
         for repo in changed:
-            summary_lines.append(f"  [cyan]{os.path.basename(repo.rstrip('/'))}[/cyan]  [dim]{repo}[/dim]")
+            summary_lines.append(
+                f"  [cyan]{os.path.basename(repo.rstrip('/'))}[/cyan]  [dim]{repo}[/dim]"
+            )
 
     if failed_count > 0:
         summary_lines.append("\n[bold]Failed repos:[/bold]")
         for repo in failed:
-            summary_lines.append(f"  [red]{os.path.basename(repo.rstrip('/'))}[/red]  [dim]{repo}[/dim]")
+            summary_lines.append(
+                f"  [red]{os.path.basename(repo.rstrip('/'))}[/red]  [dim]{repo}[/dim]"
+            )
 
     summary_color = "green" if failed_count == 0 else "yellow"
-    print(Panel(
-        "\n".join(summary_lines),
-        title="Pull Summary",
-        style=summary_color,
-    ))
+    print(
+        Panel(
+            "\n".join(summary_lines),
+            title="Pull Summary",
+            style=summary_color,
+        )
+    )
     subprocess.run(
-        ["notify-send", f"Git Pull Done — {success_count}/{total} succeeded",
-         f"Failed: {failed_count}" if failed_count else "All repos pulled successfully"],
+        [
+            "notify-send",
+            f"Git Pull Done — {success_count}/{total} succeeded",
+            f"Failed: {failed_count}"
+            if failed_count
+            else "All repos pulled successfully",
+        ],
         check=False,
     )
 
