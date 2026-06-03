@@ -299,8 +299,6 @@
 /home/serii/Local Sites/lc-emporio-del-auto/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-emmefer/app/public/wp-content/themes/ag-emme-fer/
 /home/serii/Local Sites/lc-emmefer/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
-/home/serii/Local Sites/lc-favatermoidraulica/app/public/wp-content/themes/bs-fava/
-/home/serii/Local Sites/lc-favatermoidraulica/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-anticheporte/app/public/wp-content/themes/bs-antiche-porte/
 /home/serii/Local Sites/lc-anticheporte/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-brausmd/app/public/wp-content/themes/bs-braus-immobiliare/
