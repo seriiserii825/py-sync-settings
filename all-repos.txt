@@ -83,7 +83,6 @@
 /home/serii/dotfiles/.config/nvim/autoload/plugged/sort.nvim/
 /home/serii/dotfiles/.config/nvim/
 /home/serii/dotfiles/
-/home/serii/Downloads/Knowledge-base_/
 /home/serii/Documents/Sites/wp-projects/bs-vite/
 /home/serii/Documents/my-fonts/
 /home/serii/Documents/plugins-wp/notification-for-telegram/
@@ -300,6 +299,8 @@
 /home/serii/Local Sites/lc-emporio-del-auto/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-emmefer/app/public/wp-content/themes/ag-emme-fer/
 /home/serii/Local Sites/lc-emmefer/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
+/home/serii/Local Sites/lc-favatermoidraulica/app/public/wp-content/themes/bs-fava/
+/home/serii/Local Sites/lc-favatermoidraulica/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-anticheporte/app/public/wp-content/themes/bs-antiche-porte/
 /home/serii/Local Sites/lc-anticheporte/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-brausmd/app/public/wp-content/themes/bs-braus-immobiliare/
