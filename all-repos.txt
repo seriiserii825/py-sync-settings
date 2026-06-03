@@ -83,6 +83,7 @@
 /home/serii/dotfiles/.config/nvim/autoload/plugged/sort.nvim/
 /home/serii/dotfiles/.config/nvim/
 /home/serii/dotfiles/
+/home/serii/Downloads/Knowledge-base_/
 /home/serii/Documents/Sites/wp-projects/bs-vite/
 /home/serii/Documents/my-fonts/
 /home/serii/Documents/plugins-wp/notification-for-telegram/
