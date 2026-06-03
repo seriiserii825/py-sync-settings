@@ -31,12 +31,12 @@ def gitModules():
                     os.chdir("..")
 
 
-def gitPull():
+def gitPull(skip_fetch=False):
     print(Panel(f"Pulling from {os.getcwd()}", title="Git Pull", style="blue"))
     if checkForGitDir():
         if os.path.exists(".gitmodules"):
             gitModules()
-        result = checkIfPullNeeded()
+        result = checkIfPullNeeded(skip_fetch=skip_fetch)
         if result:
             exit_code = os.system("git pull")
             if exit_code != 0:

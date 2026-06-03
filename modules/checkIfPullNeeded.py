@@ -3,13 +3,12 @@ import subprocess
 from rich import print
 
 
-def checkIfPullNeeded():
-    # Fetch the latest changes from the remote
-    result = subprocess.run(["git", "fetch"], check=True)
-
-    if result.returncode != 0:
-        print("[red]Error fetching the latest changes from the remote.")
-        return False
+def checkIfPullNeeded(skip_fetch=False):
+    if not skip_fetch:
+        result = subprocess.run(["git", "fetch"], check=True)
+        if result.returncode != 0:
+            print("[red]Error fetching the latest changes from the remote.")
+            return False
     # Get the local and remote head commit hashes
     try:
         local_commit = subprocess.check_output(["git", "rev-parse", "HEAD"]).strip()

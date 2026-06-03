@@ -29,6 +29,7 @@ def syncGit():
         ["4) [yellow]pull_changed[/]", "Pull only repos changed in last push."],
         ["5) [green]repos_to_changed_repos[/]", "Copy repos to changed-repos.txt."],
         ["6) [magenta]clear_changed[/]", "Clear changed-repos.txt."],
+        ["7) [red]exit[/]", "Exit."],
     ]
     richTable(table_title, table_columns, table_rows)
     action = console.input("[cyan]What would you like to do? ")
@@ -52,6 +53,8 @@ def syncGit():
             console.print("[green]changed-repos.txt empty.")
         else:
             console.print("[red]No changed-repos.txt to make empty.")
+    elif action == "7":
+        exit()
     else:
         console.print("[red]Invalid option. Please try again.")
         exit()
