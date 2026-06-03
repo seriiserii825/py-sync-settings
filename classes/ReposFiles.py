@@ -16,8 +16,6 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 class ReposFiles:
     PUSH_FILE = os.path.join(os.path.expanduser("~"), "Documents", "push-repos.txt")
     PUT_FILE = os.path.join(os.path.expanduser("~"), "Documents", "pull-repos.txt")
-    PUSH_FILE_GIT = os.path.join(PROJECT_ROOT, "push-repos.txt")
-    PUT_FILE_GIT = os.path.join(PROJECT_ROOT, "pull-repos.txt")
     ALL_FILE_GIT = os.path.join(PROJECT_ROOT, "all-repos.txt")
 
     def __init__(self):
@@ -60,7 +58,6 @@ class ReposFiles:
             print(f"[dim]all-repos.txt  [green]+{added_all}[/green] [red]-{removed_all}[/red]  total: {len(new_all)}[/dim]")
         else:
             print(f"[dim]all-repos.txt: no changes[/dim]")
-        self._commit_to_git()
 
     def _print_diff(self, label, old, new):
         added = sorted(new - old)
@@ -78,20 +75,6 @@ class ReposFiles:
 
         title = f"{label}  [green]+{len(added)}[/green] [red]-{len(removed)}[/red]  total: {len(new)}"
         print(Panel("\n".join(lines), title=title, style="dim"))
-
-    def _commit_to_git(self):
-        import shutil
-        shutil.copy2(self.PUSH_FILE, self.PUSH_FILE_GIT)
-        shutil.copy2(self.PUT_FILE, self.PUT_FILE_GIT)
-        result = subprocess.run(
-            ["git", "-C", PROJECT_ROOT, "diff", "--quiet", "push-repos.txt", "pull-repos.txt", "all-repos.txt"]
-        )
-        if result.returncode == 0:
-            print("[dim]repos lists: no git changes[/dim]")
-            return
-        subprocess.run(["git", "-C", PROJECT_ROOT, "add", "push-repos.txt", "pull-repos.txt", "all-repos.txt"], check=True)
-        subprocess.run(["git", "-C", PROJECT_ROOT, "commit", "-m", "upd: repos list"], check=True)
-        print("[green]repos list committed to git[/green]")
 
     def reposeWriteToFile(self, file_path, exclude_dirs):
         base_command = [
