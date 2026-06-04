@@ -236,6 +236,7 @@
 /home/serii/Local Sites/lc-nicolis-garda/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-saip-srl/app/public/wp-content/themes/lm-saip-srl/
 /home/serii/Local Sites/lc-saip-srl/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
+/home/serii/Local Sites/lc-saip-srl/app/public/wp-content/plugins/altuofianco-theme-login/
 /home/serii/Local Sites/lc-info-hotel/app/public/wp-content/themes/bs-info-hotel/
 /home/serii/Local Sites/lc-info-hotel/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-centroserviziterziario/app/public/wp-content/themes/ms-centro-elaborazione/
