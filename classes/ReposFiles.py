@@ -82,22 +82,30 @@ class ReposFiles:
         print(Panel("\n".join(lines), title=title, style="dim"))
 
     def _find_all_repos(self):
-        result = subprocess.run(
-            [
-                "find",
-                os.path.expanduser("~"),
-                "-maxdepth",
-                "4",
-                "-name",
-                ".git",
-                "-type",
-                "d",
-            ],
-            stdout=subprocess.PIPE,
-            stderr=subprocess.DEVNULL,
-            text=True,
-        )
-        return [path.replace(".git", "") for path in result.stdout.splitlines()]
+        home = os.path.expanduser("~")
+        local_sites = os.path.join(home, "Local Sites")
+
+        def run_find(path, maxdepth):
+            result = subprocess.run(
+                ["find", path, "-maxdepth", str(maxdepth), "-name", ".git", "-type", "d"],
+                stdout=subprocess.PIPE,
+                stderr=subprocess.DEVNULL,
+                text=True,
+            )
+            return result.stdout.splitlines()
+
+        paths = run_find(home, 4)
+        if os.path.isdir(local_sites):
+            paths += run_find(local_sites, 7)
+
+        seen = set()
+        unique = []
+        for p in paths:
+            if p not in seen:
+                seen.add(p)
+                unique.append(p)
+
+        return [path.replace(".git", "") for path in unique]
 
     def reposeWriteToFile(self, file_path, all_repos, exclude_dirs):
         if exclude_dirs:
