@@ -1,6 +1,5 @@
 import os
 import subprocess
-import concurrent.futures
 
 from rich import print
 from rich.console import Console
@@ -42,20 +41,22 @@ class ReposFiles:
 
         old_all = self._read_existing(self.ALL_FILE_GIT)
 
-        with concurrent.futures.ThreadPoolExecutor() as executor:
-            f_push = executor.submit(self.reposeWriteToFile, self.PUSH_FILE, self.exclude_dirs)
-            f_pull = executor.submit(self.reposeWriteToFile, self.PUT_FILE, self.exclude_for_pull + self.exclude_dirs)
-            f_all = executor.submit(self.reposeWriteToFile, self.ALL_FILE_GIT, [])
-            new_push = f_push.result()
-            new_pull = f_pull.result()
-            new_all = f_all.result()
+        all_repos = self._find_all_repos()
+
+        new_push = self.reposeWriteToFile(self.PUSH_FILE, all_repos, self.exclude_dirs)
+        new_pull = self.reposeWriteToFile(
+            self.PUT_FILE, all_repos, self.exclude_for_pull + self.exclude_dirs
+        )
+        new_all = self.reposeWriteToFile(self.ALL_FILE_GIT, all_repos, [])
 
         self._print_diff("push-repos.txt", old_push, new_push)
         self._print_diff("pull-repos.txt", old_pull, new_pull)
         added_all = len(new_all - old_all)
         removed_all = len(old_all - new_all)
         if added_all or removed_all:
-            print(f"[dim]all-repos.txt  [green]+{added_all}[/green] [red]-{removed_all}[/red]  total: {len(new_all)}[/dim]")
+            print(
+                f"[dim]all-repos.txt  [green]+{added_all}[/green] [red]-{removed_all}[/red]  total: {len(new_all)}[/dim]"
+            )
         else:
             print(f"[dim]all-repos.txt: no changes[/dim]")
 
@@ -69,30 +70,46 @@ class ReposFiles:
 
         lines = []
         for r in added:
-            lines.append(f"  [green]+[/green] [green]{os.path.basename(r.rstrip('/'))}[/green]  [dim]{r}[/dim]")
+            lines.append(
+                f"  [green]+[/green] [green]{os.path.basename(r.rstrip('/'))}[/green]  [dim]{r}[/dim]"
+            )
         for r in removed:
-            lines.append(f"  [red]-[/red] [red]{os.path.basename(r.rstrip('/'))}[/red]  [dim]{r}[/dim]")
+            lines.append(
+                f"  [red]-[/red] [red]{os.path.basename(r.rstrip('/'))}[/red]  [dim]{r}[/dim]"
+            )
 
         title = f"{label}  [green]+{len(added)}[/green] [red]-{len(removed)}[/red]  total: {len(new)}"
         print(Panel("\n".join(lines), title=title, style="dim"))
 
-    def reposeWriteToFile(self, file_path, exclude_dirs):
-        base_command = [
-            "find",
-            os.path.expanduser("~"),
-            "-maxdepth", "8",
-            "-name", ".git",
-            "-type", "d",
-        ]
-        for exclude in exclude_dirs:
-            base_command.extend(["-not", "-path", f"*/{exclude}/*"])
+    def _find_all_repos(self):
+        result = subprocess.run(
+            [
+                "find",
+                os.path.expanduser("~"),
+                "-maxdepth",
+                "4",
+                "-name",
+                ".git",
+                "-type",
+                "d",
+            ],
+            stdout=subprocess.PIPE,
+            stderr=subprocess.DEVNULL,
+            text=True,
+        )
+        return [path.replace(".git", "") for path in result.stdout.splitlines()]
 
-        result = subprocess.run(base_command, stdout=subprocess.PIPE, text=True)
-
-        git_paths = result.stdout.splitlines()
-        filtered_paths = [path.replace(".git", "") for path in git_paths]
+    def reposeWriteToFile(self, file_path, all_repos, exclude_dirs):
+        if exclude_dirs:
+            filtered = [
+                path
+                for path in all_repos
+                if not any(f"/{exc}/" in path for exc in exclude_dirs)
+            ]
+        else:
+            filtered = all_repos
 
         with open(file_path, "w") as file:
-            file.write("\n".join(filtered_paths))
+            file.write("\n".join(filtered))
 
-        return set(filtered_paths)
+        return set(filtered)
