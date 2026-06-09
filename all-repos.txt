@@ -28,6 +28,7 @@
 /home/serii/Documents/php/php-aurora/
 /home/serii/Documents/php/PHP_CodeSniffer/
 /home/serii/Documents/chrome-extensions/chrome-autocopy/
+/home/serii/Documents/chrome-extensions/chrome-graphql-export/
 /home/serii/Documents/chrome-extensions/quick-tabs-project/
 /home/serii/Documents/chrome-extensions/chrome-tabs-copy/
 /home/serii/Documents/chrome-extensions/vimium-c/
@@ -57,6 +58,7 @@
 /home/serii/.cache/yay/xnviewmp/
 /home/serii/.cache/yay/nitrogen/
 /home/serii/.cache/yay/opera/
+/home/serii/.cache/yay/simplescreenrecorder/
 /home/serii/.cache/yay/chromedriver/
 /home/serii/.cache/yay/browserpass-chrome/
 /home/serii/.cache/yay/perl-file-next/
@@ -97,6 +99,9 @@
 /home/serii/Local Sites/lc-la-colina/app/public/wp-content/themes/bs-la-colina/
 /home/serii/Local Sites/lc-idea-serramenti/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-idea-serramenti/app/public/wp-content/themes/bs-idea-serramenti/
+/home/serii/Local Sites/lc-tezza-impianti/app/public/wp-content/plugins/altuofianco-theme-login/
+/home/serii/Local Sites/lc-tezza-impianti/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
+/home/serii/Local Sites/lc-tezza-impianti/app/public/wp-content/themes/ag-tezza-impianti/
 /home/serii/Local Sites/lc-fra-le-case/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-fra-le-case/app/public/wp-content/themes/bs-fra-le-case/
 /home/serii/Local Sites/lc-iteco/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
@@ -109,6 +114,8 @@
 /home/serii/Local Sites/wp-maxkebab/app/public/wp-content/themes/bk-maxkebab/
 /home/serii/Local Sites/lc-brausmd/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-brausmd/app/public/wp-content/themes/bs-braus-immobiliare/
+/home/serii/Local Sites/lc-fcep/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
+/home/serii/Local Sites/lc-fcep/app/public/wp-content/themes/bs-fcep/
 /home/serii/Local Sites/lc-altuofianco/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-altuofianco/app/public/wp-content/themes/ar-altuofianco/
 /home/serii/Local Sites/lc-max-kebab/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
