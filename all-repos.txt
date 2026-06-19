@@ -1,4 +1,5 @@
 /home/serii/.config/nvm/
+/home/serii/.cache/yay/yandex-browser/
 /home/serii/.cache/yay/gita/
 /home/serii/.cache/yay/anydesk-bin/
 /home/serii/Pictures/wallpapers/
@@ -8,6 +9,7 @@
 /home/serii/.oh-my-zsh/
 /home/serii/dotfiles/.config/nvim/
 /home/serii/dotfiles/
+/home/serii/.codex/.tmp/plugins/
 /home/serii/Documents/my-fonts/
 /home/serii/Documents/plugins-wp/notification-for-telegram/
 /home/serii/Documents/plugins-wp/
