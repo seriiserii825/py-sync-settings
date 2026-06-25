@@ -34,7 +34,7 @@
 /home/serii/Documents/nest/nest_teashop/
 /home/serii/Documents/nest/nest-tea-stream/
 /home/serii/Documents/react/react-todo-drag/
-/home/serii/Documents/react/react-easy-smart/
+/home/serii/Documents/react/react-web-dev-quiz/
 /home/serii/Documents/react/advanced-react/
 /home/serii/Documents/html/vite-pdf-project/
 /home/serii/Documents/html/static-campeggiochisonetto/
