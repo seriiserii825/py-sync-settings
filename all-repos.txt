@@ -93,6 +93,7 @@
 /home/serii/Documents/python/py-sync-settings/
 /home/serii/Documents/python/py-arch/
 /home/serii/Documents/python/py-bitbucket/
+/home/serii/Documents/angular/ng-tik-talk/
 /home/serii/Documents/angular/angular-it-proger/
 /home/serii/Documents/Books/CleanCode/
 /home/serii/Local Sites/lc-csccesena/app/public/wp-content/themes/ar-csc-cesena/
@@ -197,6 +198,9 @@
 /home/serii/Local Sites/lc-storiedellaterra/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/bs-bertaniseramenti/app/public/wp-content/themes/bs-bertani/
 /home/serii/Local Sites/bs-bertaniseramenti/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
+/home/serii/Local Sites/lc-emmericambi/app/public/wp-content/themes/ag-emmericambi/
+/home/serii/Local Sites/lc-emmericambi/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
+/home/serii/Local Sites/lc-emmericambi/app/public/wp-content/plugins/altuofianco-theme-login/
 /home/serii/Local Sites/lc-wglab/app/public/wp-content/themes/lm-noa-wgi-lab/
 /home/serii/Local Sites/lc-wglab/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-shop-atf-care/app/public/wp-content/themes/bs-altuofianco-shop/
