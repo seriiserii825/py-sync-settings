@@ -54,6 +54,7 @@
 /home/serii/Documents/nuxt/worktime/
 /home/serii/Documents/nuxt/nuxt-web-academy/
 /home/serii/Documents/nuxt/nuxt-educore-legacy/
+/home/serii/Documents/nuxt/nuxt-pdf-generator/
 /home/serii/Documents/nuxt/nuxt-educore/
 /home/serii/Documents/nuxt/nuxt-digital-menu/
 /home/serii/Documents/nuxt/nuxt-maxkebab/
