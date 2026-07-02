@@ -15,6 +15,7 @@
 /home/serii/Documents/plugins-wp/notification-for-telegram/
 /home/serii/Documents/plugins-wp/
 /home/serii/Documents/projects/fcep-pdf-quiz/
+/home/serii/Documents/projects/doc-garda/
 /home/serii/Documents/bash/
 /home/serii/Documents/resources/complete-javascript-course/
 /home/serii/Documents/laravel/general-sound/
@@ -25,6 +26,7 @@
 /home/serii/Documents/chrome-extensions/chrome-graphql-export/
 /home/serii/Documents/chrome-extensions/chrome-autocopy/
 /home/serii/Documents/chrome-extensions/chrome-fill-form/
+/home/serii/Documents/chrome-extensions/chrome-open-wp-editor-page/
 /home/serii/Documents/chrome-extensions/chrome-tabs-copy/
 /home/serii/Documents/chrome-extensions/chrome-wp-admin/
 /home/serii/Documents/chrome-extensions/chrome-svg-copy/
@@ -102,6 +104,7 @@
 /home/serii/Local Sites/lc-gardalive/app/public/wp-content/themes/bs-gardalive/
 /home/serii/Local Sites/lc-gardalive/app/public/wp-content/plugins/gi-importer/
 /home/serii/Local Sites/lc-gardalive/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
+/home/serii/Local Sites/lc-gardalive/app/public/wp-content/plugins/altuofianco-theme-login/
 /home/serii/Local Sites/lc-maxkebab/app/public/wp-content/themes/ag-maxkebab/
 /home/serii/Local Sites/lc-maxkebab/app/public/wp-content/plugins/maib-payment-gateway-for-woocommerce/
 /home/serii/Local Sites/lc-maxkebab/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
@@ -111,8 +114,6 @@
 /home/serii/Local Sites/lc-stemar-shipping/app/public/wp-content/themes/bs-stemar-shipping/
 /home/serii/Local Sites/lc-stemar-shipping/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-stemar-shipping/app/public/wp-content/plugins/altuofianco-theme-login/
-/home/serii/Local Sites/lc-as-service/app/public/wp-content/themes/bs-as-service/
-/home/serii/Local Sites/lc-as-service/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-caire-pro/app/public/wp-content/themes/ag-cairepro/
 /home/serii/Local Sites/lc-caire-pro/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-catellani-elettronica/app/public/wp-content/themes/bs-catellani-elettronica/
@@ -162,6 +163,8 @@
 /home/serii/Local Sites/lc-24max/app/public/wp-content/themes/ms-24max/
 /home/serii/Local Sites/lc-hep/app/public/wp-content/themes/lm-hep-srl/
 /home/serii/Local Sites/lc-hep/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
+/home/serii/Local Sites/lc-cerkio-group/app/public/wp-content/themes/bs-cerkio-group/
+/home/serii/Local Sites/lc-cerkio-group/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-nicolis-garda/app/public/wp-content/themes/bs-nicolis-garda/
 /home/serii/Local Sites/lc-nicolis-garda/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-saip-srl/app/public/wp-content/themes/lm-saip-srl/
@@ -193,8 +196,6 @@
 /home/serii/Local Sites/lc-daffitalia/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-progeo/app/public/wp-content/themes/lm-progeo/
 /home/serii/Local Sites/lc-progeo/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
-/home/serii/Local Sites/lc-albergo-roma/app/public/wp-content/themes/ag-albergo-roma/
-/home/serii/Local Sites/lc-albergo-roma/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-storiedellaterra/app/public/wp-content/themes/ag-storie-della-terra/
 /home/serii/Local Sites/lc-storiedellaterra/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/bs-bertaniseramenti/app/public/wp-content/themes/bs-bertani/
@@ -206,8 +207,6 @@
 /home/serii/Local Sites/lc-wglab/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-shop-atf-care/app/public/wp-content/themes/bs-altuofianco-shop/
 /home/serii/Local Sites/lc-shop-atf-care/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
-/home/serii/Local Sites/lc-bmp-modena/app/public/wp-content/themes/bs-bmp-modena/
-/home/serii/Local Sites/lc-bmp-modena/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/f-bluebike/app/public/wp-content/themes/ms-bluebike/
 /home/serii/Local Sites/f-bluebike/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-centrorestauroserramenti/app/public/wp-content/themes/jupiter/
@@ -219,8 +218,6 @@
 /home/serii/Local Sites/lc-milone-impianti/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-vr-sistemi/app/public/wp-content/themes/bs-vr-sistemi/
 /home/serii/Local Sites/lc-vr-sistemi/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
-/home/serii/Local Sites/lc-abitareggioemilia/app/public/wp-content/themes/bs-guidotti/
-/home/serii/Local Sites/lc-abitareggioemilia/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/f-cminternational/app/public/wp-content/themes/ar-starter-vue/
 /home/serii/Local Sites/f-cminternational/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-poltronificiomazzotti/app/public/wp-content/themes/bs-poltronificio-mazzotti-bruno/
@@ -246,8 +243,6 @@
 /home/serii/Local Sites/lc-informatik/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-scuola-sci-sestriere/app/public/wp-content/themes/bs-scuola-sci-sestriere/
 /home/serii/Local Sites/lc-scuola-sci-sestriere/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
-/home/serii/Local Sites/lc-bcm-meccanica/app/public/wp-content/themes/bs-bcm-meccanica/
-/home/serii/Local Sites/lc-bcm-meccanica/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-otp/app/public/wp-content/themes/bs-otp/
 /home/serii/Local Sites/lc-otp/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-otp/app/public/wp-content/plugins/otp-login-auto/
