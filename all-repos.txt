@@ -54,6 +54,7 @@
 /home/serii/Documents/Knowledge-base_/
 /home/serii/Documents/Apps/nvim/
 /home/serii/Documents/my-fonts/
+/home/serii/Documents/neovim-lua/
 /home/serii/Documents/bash/
 /home/serii/.codex/.tmp/plugins/
 /home/serii/dotfiles/
