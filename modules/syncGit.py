@@ -1,13 +1,14 @@
 import os
 
 from rich.console import Console
+from rich.panel import Panel
 
 from classes.Command import Command
 from classes.ReposFiles import ReposFiles
 from libs.richTable import richTable
 from modules.addChangedReposToFile import addChangedReposToFile
 from modules.getCommits import getCommits
-from modules.gitPullAll import gitPullAll
+from modules.gitPullAll import LAST_MODIFIED_FILE, gitPullAll
 from modules.gitPushAll import gitPushAll
 
 
@@ -29,7 +30,8 @@ def syncGit():
         ["4) [yellow]pull_changed[/]", "Pull only repos changed in last push."],
         ["5) [green]repos_to_changed_repos[/]", "Copy repos to changed-repos.txt."],
         ["6) [magenta]clear_changed[/]", "Clear changed-repos.txt."],
-        ["7) [red]exit[/]", "Exit."],
+        ["7) [cyan]last_modified[/]", "Show repos changed in the last pull all."],
+        ["8) [red]exit[/]", "Exit."],
     ]
     richTable(table_title, table_columns, table_rows)
     action = console.input("[cyan]What would you like to do? ")
@@ -54,6 +56,16 @@ def syncGit():
         else:
             console.print("[red]No changed-repos.txt to make empty.")
     elif action == "7":
+        if os.path.exists(LAST_MODIFIED_FILE):
+            with open(LAST_MODIFIED_FILE, "r") as f:
+                content = f.read().strip()
+            if content:
+                console.print(Panel(content, title="Last modified dirs", style="cyan"))
+            else:
+                console.print("[yellow]No repos changed in the last pull.")
+        else:
+            console.print("[red]No last-modified-dirs.txt found. Run pull all first.")
+    elif action == "8":
         exit()
     else:
         console.print("[red]Invalid option. Please try again.")

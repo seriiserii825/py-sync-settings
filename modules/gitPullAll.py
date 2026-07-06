@@ -10,6 +10,15 @@ from rich.prompt import Confirm
 from modules.gitPull import gitPull
 
 FAILED_LOG = os.path.expanduser("~/Downloads/pull-failed.txt")
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+LAST_MODIFIED_FILE = os.path.join(PROJECT_ROOT, "data", "last-modified-dirs.txt")
+
+
+def _writeLastModified(repos):
+    os.makedirs(os.path.dirname(LAST_MODIFIED_FILE), exist_ok=True)
+    with open(LAST_MODIFIED_FILE, "w") as f:
+        for repo in repos:
+            f.write(repo + "\n")
 
 
 def _fetch(repo):
@@ -47,6 +56,7 @@ def gitPullAll(file_path):
 
     if not needs_pull:
         print(Panel("All repos are up to date.", style="green"))
+        _writeLastModified([])
         return
 
     lines = [f"  [cyan]{os.path.basename(r.rstrip('/'))}[/cyan]  [dim]{r}[/dim]" for r in needs_pull]
@@ -65,6 +75,8 @@ def gitPullAll(file_path):
             _notify_fail(repo)
         else:
             changed.append(repo)
+
+    _writeLastModified(changed)
 
     failed_count = len(failed)
     success_count = len(changed)
