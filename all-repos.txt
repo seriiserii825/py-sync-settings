@@ -226,6 +226,9 @@
 /home/serii/Local Sites/lc-poltronificiomazzotti/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-casa-helen/app/public/wp-content/themes/bs-casa-helen/
 /home/serii/Local Sites/lc-casa-helen/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
+/home/serii/Local Sites/lc-bicom-system/app/public/wp-content/themes/ag-bi-com-system/
+/home/serii/Local Sites/lc-bicom-system/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
+/home/serii/Local Sites/lc-bicom-system/app/public/wp-content/plugins/altuofianco-theme-login/
 /home/serii/Local Sites/lc-altaimmobiliari/app/public/wp-content/themes/bs-alta-consulenza/
 /home/serii/Local Sites/lc-altaimmobiliari/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-test/app/public/wp-content/themes/bs-test/
