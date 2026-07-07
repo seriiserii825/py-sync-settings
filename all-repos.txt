@@ -27,6 +27,7 @@
 /home/serii/Documents/chrome-extensions/chrome-graphql-export/
 /home/serii/Documents/chrome-extensions/chrome-autocopy/
 /home/serii/Documents/chrome-extensions/chrome-fill-form/
+/home/serii/Documents/chrome-extensions/chrome-generate-image-on-new-tab/
 /home/serii/Documents/chrome-extensions/chrome-open-wp-editor-page/
 /home/serii/Documents/chrome-extensions/chrome-tabs-copy/
 /home/serii/Documents/chrome-extensions/chrome-wp-admin/
