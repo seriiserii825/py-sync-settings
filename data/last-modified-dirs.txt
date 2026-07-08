@@ -1,0 +1,4 @@
+/home/serii/Documents/projects/doc-garda/
+/home/serii/Documents/bash/
+/home/serii/Documents/neovim-lua/
+/home/serii/Documents/python/py-sync-settings/
