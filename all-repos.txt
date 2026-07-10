@@ -4,6 +4,7 @@
 /home/serii/.cache/yay/gita/
 /home/serii/.cache/yay/xdg-desktop-portal-termfilechooser/
 /home/serii/.cache/yay/anydesk-bin/
+/home/serii/.cache/yay/ps_mem/
 /home/serii/Pictures/wallpapers/
 /home/serii/.antidote/
 /home/serii/snapd/
