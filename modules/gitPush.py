@@ -40,6 +40,11 @@ def pushChanges(commit_message_param=""):
     if choose in ["1", "2", "3", "4", "5"]:
         if commit_message_param == "":
             os.system("lazygit")
+        if commit_message_param == "" and not checkIfPushNeeded():
+            os.system("git push")
+            print("[green]Done")
+            decryptFiles()
+            return
         commit_message = (
             commit_message_param
             if commit_message_param != ""
