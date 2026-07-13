@@ -102,7 +102,7 @@
 /home/serii/Documents/python/py-arch/
 /home/serii/Documents/python/py-bitbucket/
 /home/serii/Documents/angular/ng-tik-talk/
-/home/serii/Documents/angular/angular-it-proger/
+/home/serii/Documents/angular/ng-simonov/
 /home/serii/Documents/Books/CleanCode/
 /home/serii/Local Sites/lc-csccesena/app/public/wp-content/themes/ar-csc-cesena/
 /home/serii/Local Sites/lc-csccesena/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
