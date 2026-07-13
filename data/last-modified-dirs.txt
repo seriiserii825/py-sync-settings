@@ -1,0 +1,4 @@
+/home/serii/Documents/python/py-scss/
+/home/serii/Documents/python/py-bitbucket/
+/home/serii/Documents/python/py-sync-settings/
+/home/serii/dotfiles/

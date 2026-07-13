@@ -38,6 +38,8 @@ def pushChanges(commit_message_param=""):
     print(f"[green]Current path: {os.getcwd()}")
     choose = tableMenu()
     if choose in ["1", "2", "3", "4", "5"]:
+        if commit_message_param == "":
+            os.system("lazygit")
         commit_message = (
             commit_message_param
             if commit_message_param != ""
