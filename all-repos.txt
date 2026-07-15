@@ -173,6 +173,9 @@
 /home/serii/Local Sites/lc-villagallorizzardi/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/bs-csm-servizi/app/public/wp-content/themes/bs-csm-servizi/
 /home/serii/Local Sites/bs-csm-servizi/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
+/home/serii/Local Sites/lc-rewind-telecomunicazionilocal/app/public/wp-content/themes/bs-rewind-telecomunicazioni/
+/home/serii/Local Sites/lc-rewind-telecomunicazionilocal/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
+/home/serii/Local Sites/lc-rewind-telecomunicazionilocal/app/public/wp-content/plugins/altuofianco-theme-login/
 /home/serii/Local Sites/lc-eti-srl/app/public/wp-content/themes/bs-eti-srl/
 /home/serii/Local Sites/lc-eti-srl/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-coltelleriamassari-torino/app/public/wp-content/themes/lm-coltelleria-massari/
