@@ -1,2 +1,7 @@
-/home/serii/dotfiles/.config/nvim/
-/home/serii/Documents/python/py-private/
+/home/serii/.password-store/
+/home/serii/Documents/python/py-vue/
+/home/serii/Documents/chrome-extensions/chrome-tabs-copy/
+/home/serii/Documents/local-cli/
+/home/serii/Documents/Knowledge-base_/
+/home/serii/Documents/Apps/nvim-coc/
+/home/serii/Documents/bash/
