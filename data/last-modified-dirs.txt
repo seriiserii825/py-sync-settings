@@ -1,11 +1,5 @@
-/home/serii/.password-store/
-/home/serii/Documents/doc-garda/
-/home/serii/Documents/python/py-scss/
-/home/serii/Documents/python/py-bitbucket/
-/home/serii/Documents/python/py-wp/
-/home/serii/Documents/python/py-sync-settings/
-/home/serii/Documents/chrome-extensions/chrome-tabs-copy/
-/home/serii/Documents/Knowledge-base_/
-/home/serii/Documents/Apps/nvim-coc/
-/home/serii/Documents/bash/
+/home/serii/dotfiles/.config/nvim/
 /home/serii/dotfiles/
+/home/serii/Documents/bash/
+/home/serii/Documents/python/py-scss/
+/home/serii/Documents/python/py-sync-settings/
