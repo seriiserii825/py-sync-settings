@@ -1,5 +1,1 @@
-/home/serii/dotfiles/.config/nvim/
-/home/serii/dotfiles/
 /home/serii/Documents/bash/
-/home/serii/Documents/python/py-scss/
-/home/serii/Documents/python/py-sync-settings/
