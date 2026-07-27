@@ -47,7 +47,6 @@
 /home/serii/Documents/vue/vue-silcompa/
 /home/serii/Documents/nestjs/nest_teashop/
 /home/serii/Documents/nestjs/nest-tea-stream/
-/home/serii/Documents/react/react-web-dev-quiz/
 /home/serii/Documents/react/react-todo-drag/
 /home/serii/Documents/react/react-minin-course/
 /home/serii/Documents/local-cli/
