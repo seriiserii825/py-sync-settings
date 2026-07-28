@@ -1,9 +1,5 @@
 /home/serii/.password-store/
-/home/serii/Documents/doc-garda/
-/home/serii/Documents/python/py-scss/
-/home/serii/Documents/python/py-vue/
 /home/serii/Documents/python/py-private/
-/home/serii/Documents/python/py-bitbucket/
+/home/serii/Documents/python/py-scss/
 /home/serii/Documents/python/py-wp/
 /home/serii/Documents/python/py-sync-settings/
-/home/serii/Documents/bash/
