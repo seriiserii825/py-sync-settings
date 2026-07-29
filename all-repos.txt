@@ -17,6 +17,7 @@
 /home/serii/Documents/plugins-wp/notification-for-telegram/
 /home/serii/Documents/plugins-wp/
 /home/serii/Documents/projects/fcep-pdf-quiz/
+/home/serii/Documents/projects/docs-gardalive/
 /home/serii/Documents/projects/doc-garda/
 /home/serii/Documents/bash/
 /home/serii/Documents/resources/complete-javascript-course/
@@ -255,6 +256,8 @@
 /home/serii/Local Sites/lc-idea-serramenti/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-studio-rostellato/app/public/wp-content/themes/bs-studio-rostellato/
 /home/serii/Local Sites/lc-studio-rostellato/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
+/home/serii/Local Sites/lc-sicureco-veneto/app/public/wp-content/themes/bs-sicureco-veneto/
+/home/serii/Local Sites/lc-sicureco-veneto/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-totem-rst/app/public/wp-content/themes/bs-totem-rst/
 /home/serii/Local Sites/lc-totem-rst/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-meridiana/app/public/wp-content/themes/bs-meridiana/
