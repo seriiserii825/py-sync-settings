@@ -202,6 +202,9 @@
 /home/serii/Local Sites/lc-tezza-impianti/app/public/wp-content/themes/ag-tezza-impianti/
 /home/serii/Local Sites/lc-tezza-impianti/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-tezza-impianti/app/public/wp-content/plugins/altuofianco-theme-login/
+/home/serii/Local Sites/lc-foresteria/app/public/wp-content/themes/lm-foresteria-del-cole/
+/home/serii/Local Sites/lc-foresteria/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
+/home/serii/Local Sites/lc-foresteria/app/public/wp-content/plugins/altuofianco-theme-login/
 /home/serii/Local Sites/lc-vr-sistemi/app/public/wp-content/themes/bs-vr-sistemi/
 /home/serii/Local Sites/lc-vr-sistemi/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-area-51/app/public/wp-content/themes/bs-area-51/
@@ -258,6 +261,7 @@
 /home/serii/Local Sites/lc-studio-rostellato/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-sicureco-veneto/app/public/wp-content/themes/bs-sicureco-veneto/
 /home/serii/Local Sites/lc-sicureco-veneto/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
+/home/serii/Local Sites/lc-sicureco-veneto/app/public/wp-content/plugins/altuofianco-theme-login/
 /home/serii/Local Sites/lc-totem-rst/app/public/wp-content/themes/bs-totem-rst/
 /home/serii/Local Sites/lc-totem-rst/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-meridiana/app/public/wp-content/themes/bs-meridiana/
