@@ -1,4 +1,5 @@
 import os
+import sys
 
 from rich import print
 
@@ -17,7 +18,10 @@ def gitPushAll(file_path):
             print(f"Pushing {line}")
             os.chdir(line)
             if checkIfPushNeeded():
-                gitPush()
+                pull_needed = gitPush()
+                if pull_needed:
+                    print(f"[red]Aborting: {line} needs a pull first.")
+                    sys.exit(1)
     if os.path.exists(changed_file):
         os.chdir(project_root)
         os.system(

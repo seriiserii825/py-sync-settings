@@ -103,7 +103,7 @@ def gitPush(commit_message=""):
         gitModules()
         if checkIfPullNeeded():
             print("[red]Pull needed. Run git pull first.")
-            return
+            return True
         if os.path.exists(".gpgrc"):
             encryptFiles()
             if checkIfPushNeeded():
