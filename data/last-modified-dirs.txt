@@ -1,11 +1,6 @@
-/home/serii/.password-store/
-/home/serii/Documents/python/py-scss/
-/home/serii/Documents/python/py-private/
-/home/serii/Documents/python/py-bitbucket/
-/home/serii/Documents/python/py-wp/
-/home/serii/Documents/python/py-sync-settings/
-/home/serii/Documents/chrome-extensions/chrome-tabs-copy/
-/home/serii/Documents/Apps/nvim-coc/
-/home/serii/Documents/my-fonts/
+/home/serii/dotfiles/
 /home/serii/Documents/bash/
-/home/serii/Downloads/bs-vite/
+/home/serii/Documents/Apps/nvim-coc/
+/home/serii/Documents/python/py-sync-settings/
+/home/serii/Documents/python/py-bitbucket/
+/home/serii/Documents/angular/ng-simonov/
