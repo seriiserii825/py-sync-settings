@@ -127,6 +127,9 @@
 /home/serii/Local Sites/lc-foresteria/app/public/wp-content/themes/lm-foresteria-del-cole/
 /home/serii/Local Sites/lc-foresteria/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-foresteria/app/public/wp-content/plugins/altuofianco-theme-login/
+/home/serii/Local Sites/lc-manitoba/app/public/wp-content/themes/bs-manitoba/
+/home/serii/Local Sites/lc-manitoba/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
+/home/serii/Local Sites/lc-manitoba/app/public/wp-content/plugins/altuofianco-theme-login/
 /home/serii/Local Sites/lc-sigma/app/public/wp-content/themes/bs-sigma/
 /home/serii/Local Sites/lc-sigma/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-sigma/app/public/wp-content/plugins/altuofianco-theme-login/
@@ -139,6 +142,6 @@
 /home/serii/Local Sites/lc-sicureco-veneto/app/public/wp-content/themes/bs-sicureco-veneto/
 /home/serii/Local Sites/lc-sicureco-veneto/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-sicureco-veneto/app/public/wp-content/plugins/altuofianco-theme-login/
-/home/serii/Local Sites/lc-fcep/app/public/wp-content/themes/bs-circolo-tennis/
-/home/serii/Local Sites/lc-fcep/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
-/home/serii/Local Sites/lc-fcep/app/public/wp-content/plugins/altuofianco-theme-login/
+/home/serii/Local Sites/lc-circolo-tennis/app/public/wp-content/themes/bs-circolo-tennis/
+/home/serii/Local Sites/lc-circolo-tennis/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
+/home/serii/Local Sites/lc-circolo-tennis/app/public/wp-content/plugins/altuofianco-theme-login/
