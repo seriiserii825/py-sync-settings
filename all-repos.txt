@@ -101,8 +101,8 @@
 /home/serii/Documents/python/py-sync-settings/
 /home/serii/Documents/python/py-arch/
 /home/serii/Documents/python/py-bitbucket/
+/home/serii/Documents/angular/ng-course/
 /home/serii/Documents/angular/ng-tik-talk/
-/home/serii/Documents/angular/ng-simonov/
 /home/serii/Documents/Books/CleanCode/
 /home/serii/Local Sites/lc-gardalive/app/public/wp-content/themes/bs-gardalive/
 /home/serii/Local Sites/lc-gardalive/app/public/wp-content/plugins/gi-importer/
