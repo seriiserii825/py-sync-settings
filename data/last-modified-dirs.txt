@@ -1,14 +1,3 @@
-/home/serii/.password-store/
-/home/serii/Documents/angular/ng-course/
-/home/serii/Documents/python/py-scss/
-/home/serii/Documents/python/py-private/
-/home/serii/Documents/python/py-bitbucket/
-/home/serii/Documents/python/py-wp/
-/home/serii/Documents/python/py-sync-settings/
-/home/serii/Documents/chrome-extensions/quick-tabs-project/
-/home/serii/Documents/chrome-extensions/chrome-tabs-copy/
-/home/serii/Documents/chrome-extensions/chrome-fill-form/
-/home/serii/Documents/chrome-extensions/chrome-vimium-c/
-/home/serii/Documents/Apps/nvim-coc/
-/home/serii/Documents/bash/
 /home/serii/dotfiles/
+/home/serii/Documents/Apps/nvim-coc/
+/home/serii/Documents/python/py-sync-settings/
