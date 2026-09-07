@@ -115,6 +115,7 @@
 /home/serii/Local Sites/lc-algor-eletronica/app/public/wp-content/plugins/altuofianco-theme-login/
 /home/serii/Local Sites/lc-dolomiti-di-brenta/app/public/wp-content/themes/bs-dolomiti-di-brenta/
 /home/serii/Local Sites/lc-dolomiti-di-brenta/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
+/home/serii/Local Sites/lc-dolomiti-di-brenta/app/public/wp-content/plugins/altuofianco-theme-login/
 /home/serii/Local Sites/lc-iteco/app/public/wp-content/themes/bs-iteco/
 /home/serii/Local Sites/lc-iteco/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-rewind-telecomunicazionilocal/app/public/wp-content/themes/bs-rewind-telecomunicazioni/
