@@ -24,7 +24,6 @@
 /home/serii/Documents/python/py_ports/
 /home/serii/Documents/python/py-files/
 /home/serii/Documents/python/py-arch/
-/home/serii/Documents/python/py-paris/
 /home/serii/Documents/python/py-commit/
 /home/serii/Documents/python/py-sync-settings/
 /home/serii/Documents/python/py-pacman/
@@ -33,6 +32,7 @@
 /home/serii/Documents/chrome-extensions/chrome-autocopy/
 /home/serii/Documents/chrome-extensions/chrome-graphql-export/
 /home/serii/Documents/chrome-extensions/quick-tabs-project/
+/home/serii/Documents/chrome-extensions/chrome-figma-copy/
 /home/serii/Documents/chrome-extensions/chrome-tabs-copy/
 /home/serii/Documents/chrome-extensions/vimium-c/
 /home/serii/Documents/chrome-extensions/chrome-autofill/
@@ -119,6 +119,9 @@
 /home/serii/Local Sites/lc-la-colina/app/public/wp-content/plugins/facturare-persoana-fizica-sau-juridica/
 /home/serii/Local Sites/lc-la-colina/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-la-colina/app/public/wp-content/themes/bs-la-colina/
+/home/serii/Local Sites/lc-storm/app/public/wp-content/plugins/altuofianco-theme-login/
+/home/serii/Local Sites/lc-storm/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
+/home/serii/Local Sites/lc-storm/app/public/wp-content/themes/ar-storm/
 /home/serii/Local Sites/lc-elmarx-srl/app/public/wp-content/plugins/altuofianco-theme-login/
 /home/serii/Local Sites/lc-elmarx-srl/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-elmarx-srl/app/public/wp-content/themes/bs-elmarx-srl/
@@ -133,6 +136,8 @@
 /home/serii/Local Sites/lc-algor-eletronica/app/public/wp-content/plugins/altuofianco-theme-login/
 /home/serii/Local Sites/lc-algor-eletronica/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-algor-eletronica/app/public/wp-content/themes/bs-algor-eletronica/
+/home/serii/Local Sites/lc-abitat-group/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
+/home/serii/Local Sites/lc-abitat-group/app/public/wp-content/themes/bs-abitat-group/
 /home/serii/Local Sites/lc-rewind-telecomunicazionilocal/app/public/wp-content/plugins/altuofianco-theme-login/
 /home/serii/Local Sites/lc-rewind-telecomunicazionilocal/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-rewind-telecomunicazionilocal/app/public/wp-content/themes/bs-rewind-telecomunicazioni/
