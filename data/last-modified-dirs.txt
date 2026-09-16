@@ -1,6 +1,0 @@
-/home/serii/dotfiles/
-/home/serii/Documents/chrome-extensions/chrome-tabs-copy/
-/home/serii/Documents/nest/nest-teashop-angular/
-/home/serii/Documents/Knowledge-base_/
-/home/serii/Documents/Apps/nvim-coc/
-/home/serii/Documents/python/py-sync-settings/
