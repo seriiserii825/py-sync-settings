@@ -120,8 +120,6 @@
 /home/serii/Local Sites/lc-dolomiti-di-brenta/app/public/wp-content/themes/bs-dolomiti-di-brenta/
 /home/serii/Local Sites/lc-dolomiti-di-brenta/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-dolomiti-di-brenta/app/public/wp-content/plugins/altuofianco-theme-login/
-/home/serii/Local Sites/lc-listinodigital/app/public/wp-content/themes/ar-listinodigital/
-/home/serii/Local Sites/lc-listinodigital/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-storm/app/public/wp-content/themes/ar-storm/
 /home/serii/Local Sites/lc-storm/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-storm/app/public/wp-content/plugins/altuofianco-theme-login/
