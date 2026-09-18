@@ -133,6 +133,8 @@
 /home/serii/Local Sites/lc-casagratis/app/public/wp-content/themes/ag-casagratis/
 /home/serii/Local Sites/lc-casagratis/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-casagratis/app/public/wp-content/plugins/altuofianco-theme-login/
+/home/serii/Local Sites/lc-borgoluce/app/public/wp-content/themes/bs-borgoluce-2/
+/home/serii/Local Sites/lc-borgoluce/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-wrap-studio/app/public/wp-content/themes/bs-wrap-studio/
 /home/serii/Local Sites/lc-wrap-studio/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-wrap-studio/app/public/wp-content/plugins/altuofianco-theme-login/
