@@ -1,6 +1,7 @@
 import csv
 import os
 import subprocess
+import sys
 
 from rich import print
 from rich.panel import Panel
@@ -39,8 +40,8 @@ def autoCommit():
     print(Panel(f"Auto-committing {os.getcwd()}", title=title, style="blue"))
 
     if checkIfPullNeeded():
-        print("[red]Pull needed. Run git pull first.")
-        return True
+        print(f"[red]Aborting: {os.getcwd()} needs a pull first.")
+        sys.exit(1)
 
     has_gpgrc = os.path.isfile(".gpgrc")
     if has_gpgrc:

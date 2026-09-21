@@ -41,7 +41,6 @@
 /home/serii/Documents/chrome-extensions/chrome-autofill/
 /home/serii/Documents/nest/nest-teashop-angular/
 /home/serii/Documents/nest/nest_teashop/
-/home/serii/Documents/nest/nest-tea-stream/
 /home/serii/Documents/react/react-todo-drag/
 /home/serii/Documents/react/react-web-dev-quiz/
 /home/serii/Documents/react/advanced-react/

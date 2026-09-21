@@ -3,6 +3,7 @@ import sys
 
 from rich import print
 
+from modules.autoCommit import autoCommit
 from modules.checkIfPushNeeded import checkIfPushNeeded
 from modules.gitPush import gitPush
 
@@ -17,6 +18,8 @@ def gitPushAll(file_path):
             line = line.strip()
             print(f"Pushing {line}")
             os.chdir(line)
+            if autoCommit():
+                continue
             if checkIfPushNeeded():
                 pull_needed = gitPush()
                 if pull_needed:
