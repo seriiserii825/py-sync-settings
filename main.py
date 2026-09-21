@@ -4,6 +4,7 @@ import sys
 from rich.console import Console
 
 from libs.richTable import richTable
+from modules.autoCommit import autoCommit
 from modules.gitClone import gitClone
 from modules.gitPull import gitPull
 from modules.gitPush import gitPush
@@ -17,6 +18,9 @@ def menu():
 
     if len(args) > 1 and args[1] == "pull":
         gitPull()
+        return
+
+    if len(args) == 1 and autoCommit():
         return
 
     args_str = ""

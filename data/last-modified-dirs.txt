@@ -1,1 +1,1 @@
-/home/serii/Documents/Apps/nvim-coc/
+/home/serii/Documents/python/py-private/
