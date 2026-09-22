@@ -124,6 +124,8 @@
 /home/serii/Local Sites/lc-storm/app/public/wp-content/plugins/altuofianco-theme-login/
 /home/serii/Local Sites/lc-palazzetti-ortofrutta/app/public/wp-content/themes/bs-palazzetti-ortofrutta/
 /home/serii/Local Sites/lc-palazzetti-ortofrutta/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
+/home/serii/Local Sites/lc-igecos/app/public/wp-content/themes/bs-igecos/
+/home/serii/Local Sites/lc-igecos/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-iteco/app/public/wp-content/themes/bs-iteco/
 /home/serii/Local Sites/lc-iteco/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-rewind-telecomunicazionilocal/app/public/wp-content/themes/bs-rewind-telecomunicazioni/
