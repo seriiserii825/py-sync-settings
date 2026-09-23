@@ -105,6 +105,7 @@
 /home/serii/Documents/python/py-bitbucket/
 /home/serii/Documents/angular/ng-course/
 /home/serii/Documents/angular/ng-tik-talk/
+/home/serii/Documents/angular/ng-teashop/
 /home/serii/Documents/Books/CleanCode/
 /home/serii/Local Sites/lc-gardalive/app/public/wp-content/themes/bs-gardalive/
 /home/serii/Local Sites/lc-gardalive/app/public/wp-content/plugins/gi-importer/
