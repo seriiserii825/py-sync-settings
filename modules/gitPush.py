@@ -72,28 +72,28 @@ def pushChanges(commit_message_param=""):
 
 
 def gitModules():
-    if os.path.exists(".gitmodules"):
-        with open(".gitmodules") as f:
-            lines = f.readlines()
-            for line in lines:
-                if "path" in line:
-                    path = line.split("=")[1].strip()
-                    if path == "libs" and os.path.exists("libs"):
-                        os.chdir(path)
-                        print(f"[green]Current path: {os.getcwd()}")
-                        if checkForGitDir():
-                            if checkIfPushNeeded():
-                                pushChanges()
-                                os.chdir("..")
-                            else:
-                                print("[red]No changes to commit")
-                                os.chdir("..")
-                        else:
-                            print("[red]No git dir found")
-                            os.chdir("..")
-                    else:
-                        print(f"[red]Path {path} not found")
-                        print(f"[green]Current path: {os.getcwd()}")
+    if not os.path.exists(".gitmodules"):
+        return
+    original_cwd = os.getcwd()
+    with open(".gitmodules") as f:
+        lines = f.readlines()
+    for line in lines:
+        if "path" not in line:
+            continue
+        path = line.split("=")[1].strip()
+        if not os.path.exists(path):
+            print(f"[red]Submodule path {path} not found")
+            continue
+        os.chdir(path)
+        print(Panel(f"Pushing submodule {path}", title="Git Push", style="cyan"))
+        if checkForGitDir():
+            if checkIfPushNeeded():
+                pushChanges()
+            else:
+                print("[red]No changes to commit")
+        else:
+            print("[red]No git dir found")
+        os.chdir(original_cwd)
 
 
 def gitPush(commit_message=""):

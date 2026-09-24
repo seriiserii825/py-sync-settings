@@ -5,35 +5,35 @@ from rich.panel import Panel
 
 from modules.checkForGitDir import checkForGitDir
 from modules.checkIfPullNeeded import checkIfPullNeeded
+from modules.setupSubmodules import setupSubmodules
 from utils.decryptFiles import decryptFiles
 
 
 def gitModules():
     os.system("git submodule init")
     os.system("git submodule update")
-    # get submodule dirs from .gitmodules
+    if not os.path.exists(".gitmodules"):
+        return
+    original_cwd = os.getcwd()
     with open(".gitmodules") as f:
         lines = f.readlines()
-        for line in lines:
-            if "path" in line:
-                print(
-                    Panel(
-                        f"Pulling from {os.getcwd()}", title="Git Pull", style="yellow"
-                    )
-                )
-                path = line.split("=")[1].strip()
-                if path == "libs":
-                    os.chdir(path)
-                    gitPull()
-                    os.chdir("..")
-                else:
-                    print(f"[red]Error: libs not found")
-                    os.chdir("..")
+    for line in lines:
+        if "path" not in line:
+            continue
+        path = line.split("=")[1].strip()
+        if not os.path.exists(path):
+            print(f"[red]Submodule path {path} not found")
+            continue
+        os.chdir(path)
+        print(Panel(f"Pulling submodule {path}", title="Git Pull", style="yellow"))
+        gitPull()
+        os.chdir(original_cwd)
 
 
 def gitPull(skip_fetch=False):
     print(Panel(f"Pulling from {os.getcwd()}", title="Git Pull", style="blue"))
     if checkForGitDir():
+        setupSubmodules()
         if os.path.exists(".gitmodules"):
             gitModules()
         result = checkIfPullNeeded(skip_fetch=skip_fetch)
