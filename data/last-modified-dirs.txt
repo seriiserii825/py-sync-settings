@@ -1,8 +1,0 @@
-/home/serii/Documents/bash/
-/home/serii/Documents/nest/nest-teashop-angular/
-/home/serii/Documents/Knowledge-base_/
-/home/serii/Documents/Apps/nvim-coc/
-/home/serii/Documents/python/py-scss/
-/home/serii/Documents/python/py-sync-settings/
-/home/serii/Documents/python/py-bitbucket/
-/home/serii/Documents/angular/ng-teashop/
