@@ -21,8 +21,27 @@ def _writeLastModified(repos):
             f.write(repo + "\n")
 
 
+def _submodule_paths(repo):
+    gitmodules = os.path.join(repo, ".gitmodules")
+    if not os.path.isfile(gitmodules):
+        return []
+    paths = []
+    with open(gitmodules) as f:
+        for line in f:
+            line = line.strip()
+            if not line.startswith("path"):
+                continue
+            sub_path = line.split("=")[1].strip()
+            if sub_path:
+                paths.append(os.path.join(repo, sub_path))
+    return paths
+
+
 def _fetch(repo):
     subprocess.run(["git", "-C", repo, "fetch", "-q"], capture_output=True)
+    for sub in _submodule_paths(repo):
+        if os.path.isdir(sub):
+            _fetch(sub)
 
 
 def _needs_pull(repo):
@@ -31,9 +50,14 @@ def _needs_pull(repo):
             ["git", "-C", repo, "rev-list", "HEAD..@{u}", "--count"],
             stderr=subprocess.DEVNULL,
         ).strip()
-        return int(count) > 0
+        if int(count) > 0:
+            return True
     except (subprocess.CalledProcessError, ValueError):
-        return False
+        pass
+    return any(
+        os.path.isdir(sub) and _needs_pull(sub)
+        for sub in _submodule_paths(repo)
+    )
 
 
 def gitPullAll(file_path):
