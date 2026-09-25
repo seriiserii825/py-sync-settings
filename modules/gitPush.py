@@ -1,4 +1,5 @@
 import os
+import subprocess
 
 from rich import print
 from rich.panel import Panel
@@ -96,6 +97,37 @@ def gitModules():
         os.chdir(original_cwd)
 
 
+def getSubmodulePaths():
+    if not os.path.exists(".gitmodules"):
+        return set()
+    with open(".gitmodules") as f:
+        return {
+            line.split("=")[1].strip()
+            for line in f
+            if line.strip().startswith("path")
+        }
+
+
+def onlySubmodulesChanged():
+    submodule_paths = getSubmodulePaths()
+    if not submodule_paths:
+        return False
+    result = subprocess.run(
+        ["git", "status", "--porcelain"], capture_output=True, text=True
+    )
+    changed = [line[3:] for line in result.stdout.splitlines() if line]
+    return bool(changed) and all(path in submodule_paths for path in changed)
+
+
+def pushSubmodulesUpdate():
+    print("[green]Only submodules changed, auto-committing")
+    subprocess.run(["git", "add", "."], check=True)
+    subprocess.run(["git", "commit", "-m", "feat: libs updated"], check=True)
+    subprocess.run(["git", "push"], check=True)
+    print("[green]Done")
+    decryptFiles()
+
+
 def gitPush(commit_message=""):
     print(Panel(f"Pushing from {os.getcwd()}", title="Git Push", style="blue"))
     if checkForGitDir():
@@ -106,12 +138,16 @@ def gitPush(commit_message=""):
             return True
         if os.path.exists(".gpgrc"):
             encryptFiles()
-            if checkIfPushNeeded():
+            if onlySubmodulesChanged():
+                pushSubmodulesUpdate()
+            elif checkIfPushNeeded():
                 pushChanges(commit_message_param=commit_message)
             else:
                 print("[red]No changes to commit")
         else:
-            if checkIfPushNeeded():
+            if onlySubmodulesChanged():
+                pushSubmodulesUpdate()
+            elif checkIfPushNeeded():
                 pushChanges(commit_message_param=commit_message)
             else:
                 print("[red]No changes to commit")

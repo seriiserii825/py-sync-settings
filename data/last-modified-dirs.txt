@@ -1,7 +1,11 @@
+/home/serii/Documents/Apps/nvim-coc/
 /home/serii/Documents/python/py-vue/
 /home/serii/Documents/python/py-lv/
+/home/serii/Documents/python/py-clipboard/
 /home/serii/Documents/python/py-dotfiles/
+/home/serii/Documents/python/python-scripts/
 /home/serii/Documents/python/py-private/
+/home/serii/Documents/python/py-scss/
 /home/serii/Documents/python/py-nest/
 /home/serii/Documents/python/py-parsing/
 /home/serii/Documents/python/py-files/
