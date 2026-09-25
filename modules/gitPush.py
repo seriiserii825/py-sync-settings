@@ -97,19 +97,32 @@ def gitModules():
         os.chdir(original_cwd)
 
 
-def getSubmodulePaths():
+def getPyLibsSubmodulePaths():
     if not os.path.exists(".gitmodules"):
         return set()
-    with open(".gitmodules") as f:
-        return {
-            line.split("=")[1].strip()
-            for line in f
-            if line.strip().startswith("path")
-        }
+    result = subprocess.run(
+        [
+            "git", "config", "-f", ".gitmodules",
+            "--get-regexp", r"^submodule\..*\.(path|url)$",
+        ],
+        capture_output=True,
+        text=True,
+    )
+    paths = {}
+    urls = {}
+    for line in result.stdout.splitlines():
+        key, _, value = line.partition(" ")
+        name, _, field = key[len("submodule."):].rpartition(".")
+        (paths if field == "path" else urls)[name] = value.strip()
+    return {
+        path
+        for name, path in paths.items()
+        if urls.get(name, "").removesuffix(".git").endswith("/py-libs")
+    }
 
 
 def onlySubmodulesChanged():
-    submodule_paths = getSubmodulePaths()
+    submodule_paths = getPyLibsSubmodulePaths()
     if not submodule_paths:
         return False
     result = subprocess.run(
