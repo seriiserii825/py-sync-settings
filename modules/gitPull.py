@@ -80,14 +80,16 @@ def gitModules():
 def gitPull(skip_fetch=False):
     print(Panel(f"Pulling from {os.getcwd()}", title="Git Pull", style="blue"))
     if checkForGitDir():
-        setupSubmodules()
-        if os.path.exists(".gitmodules"):
-            gitModules()
         result = checkIfPullNeeded(skip_fetch=skip_fetch)
         if result:
             exit_code = os.system("git pull")
             if exit_code != 0:
                 return False
+        # after the pull: it may have just brought .submodules/.gitmodules
+        # and an empty submodule dir that still needs to be cloned
+        setupSubmodules()
+        if os.path.exists(".gitmodules"):
+            gitModules()
         decryptFiles()
         return True
     return True
