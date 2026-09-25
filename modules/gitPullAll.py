@@ -44,7 +44,17 @@ def _fetch(repo):
             _fetch(sub)
 
 
+def _submodule_missing(repo):
+    # empty/missing submodule dir -> not initialized, gitPull will init it
+    return any(
+        not os.path.exists(os.path.join(sub, ".git"))
+        for sub in _submodule_paths(repo)
+    )
+
+
 def _needs_pull(repo):
+    if _submodule_missing(repo):
+        return True
     try:
         count = subprocess.check_output(
             ["git", "-C", repo, "rev-list", "HEAD..@{u}", "--count"],
