@@ -98,6 +98,7 @@
 /home/serii/Documents/python/py-wp/
 /home/serii/Documents/python/py_ports/
 /home/serii/Documents/python/py-commit/
+/home/serii/Documents/python/py-angular/
 /home/serii/Documents/python/py-sync-settings/
 /home/serii/Documents/python/py-libs/
 /home/serii/Documents/python/py-arch/
