@@ -1,2 +1,6 @@
 /home/serii/Documents/python/py-angular/
+/home/serii/Documents/python/py-vue/
+/home/serii/Documents/python/py-private/
+/home/serii/Documents/python/py-bitbucket/
 /home/serii/Documents/python/py-wp/
+/home/serii/Documents/python/py-files/
