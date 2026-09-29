@@ -1,8 +1,6 @@
-/home/serii/.password-store/
-/home/serii/Documents/angular/ng-teashop/
-/home/serii/Documents/python/py-wp/
+/home/serii/dotfiles/.config/nvim/
+/home/serii/Documents/nest/nest-teashop-angular/
+/home/serii/Documents/Apps/mpv-bash/
+/home/serii/Documents/Apps/nvim-coc/
 /home/serii/Documents/python/py-sync-settings/
-/home/serii/Documents/chrome-extensions/chrome-tabs-copy/
-/home/serii/Documents/chrome-extensions/chrome-vimium-c/
-/home/serii/Documents/bash/
-/home/serii/dotfiles/
+/home/serii/Documents/angular/ng-teashop/
