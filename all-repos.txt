@@ -46,6 +46,7 @@
 /home/serii/Documents/react/advanced-react/
 /home/serii/Documents/react/react-before-after-image-web-dev/
 /home/serii/Documents/html/vite-pdf-project/
+/home/serii/Documents/html/vite-project/
 /home/serii/Documents/html/static-campeggiochisonetto/
 /home/serii/Documents/html/static-bmp-modena/
 /home/serii/Documents/html/html-shop/
