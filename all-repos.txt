@@ -160,9 +160,6 @@
 /home/serii/Local Sites/lc-agroup/app/public/wp-content/themes/bs-argroup/
 /home/serii/Local Sites/lc-agroup/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-agroup/app/public/wp-content/plugins/altuofianco-theme-login/
-/home/serii/Local Sites/lc-ar-fer/app/public/wp-content/themes/ar-fer/
-/home/serii/Local Sites/lc-ar-fer/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
-/home/serii/Local Sites/lc-ar-fer/app/public/wp-content/plugins/altuofianco-theme-login/
 /home/serii/Local Sites/lc-sicureco-veneto/app/public/wp-content/themes/bs-sicureco-veneto/
 /home/serii/Local Sites/lc-sicureco-veneto/app/public/wp-content/plugins/advanced-custom-fields-wpcli/
 /home/serii/Local Sites/lc-sicureco-veneto/app/public/wp-content/plugins/altuofianco-theme-login/
