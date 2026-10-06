@@ -7,12 +7,19 @@ from libs.buffer import getFromClipboard
 def gitClone():
     clipboard = getFromClipboard()
 
-    urls = ("github.com", "bitbucket.org", "gitlab.com", "repo clone")
+    urls = (
+        "github.com",
+        "bitbucket.org",
+        "gitlab.com",
+        "git.bludelego.com",
+        "repo clone",
+    )
+    # Hosts whose copied URL is bare (without the "git clone" prefix)
+    bare_url_hosts = ("github.com", "git.bludelego.com")
     if any(url in clipboard for url in urls):
         print(clipboard)
 
-        git_command = f"{clipboard} --single-branch"
-        if "github.com" in clipboard:
+        if any(host in clipboard for host in bare_url_hosts):
             git_command = f"git clone {clipboard}"
         else:
             git_command = f"{clipboard}"
