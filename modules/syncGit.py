@@ -31,7 +31,8 @@ def syncGit():
         ["5) [green]repos_to_changed_repos[/]", "Copy repos to changed-repos.txt."],
         ["6) [magenta]clear_changed[/]", "Clear changed-repos.txt."],
         ["7) [cyan]last_modified[/]", "Show repos changed in the last pull all."],
-        ["8) [red]exit[/]", "Exit."],
+        ["8) [green]commits_local[/]", "Today's commits in ~/Local Sites."],
+        ["9) [red]exit[/]", "Exit."],
     ]
     richTable(table_title, table_columns, table_rows)
     action = console.input("[cyan]What would you like to do? ")
@@ -66,6 +67,8 @@ def syncGit():
         else:
             console.print("[red]No last-modified-dirs.txt found. Run pull all first.")
     elif action == "8":
+        getCommits(file_push, projects=True)
+    elif action == "9":
         exit()
     else:
         console.print("[red]Invalid option. Please try again.")
