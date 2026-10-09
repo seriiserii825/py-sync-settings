@@ -45,7 +45,7 @@ uv run autopep8 --in-place --recursive .
 
 ## Key Conventions
 
-- Commit types: `feat`, `upd`, `bug-fix`, `fix`, `core` — selected via interactive menu in `utils/tableMenu.py`
+- Commit types: `feat`, `upd`, `bug-fix`, `fix`, `core` — selected via the colored fzf menu in `utils/tableMenu.py` (`Menu.select_fzf_menu`; returns "1".."6", "7" = Exit/Esc)
 - Commits are formatted as `<type>: <message>` (e.g., `feat: add new feature`)
 - Uses `rich` for all terminal output (tables, panels, colored text)
 - Uses `pyfzf` for fuzzy selection
