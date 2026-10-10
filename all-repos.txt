@@ -56,6 +56,7 @@
 /home/serii/Documents/react/react-todo-drag/
 /home/serii/Documents/react/react-minin-course/
 /home/serii/Documents/local-cli/
+/home/serii/Documents/go-course/
 /home/serii/Documents/Knowledge-base_/
 /home/serii/Documents/Apps/nvim-coc/
 /home/serii/Documents/Apps/mpv-bash/
