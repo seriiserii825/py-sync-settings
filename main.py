@@ -16,21 +16,26 @@ console = Console()
 def menu():
     args = sys.argv
 
-    if len(args) > 1 and args[1] == "pull":
+    if len(args) > 1 and args[1] in ("pull", "--pull"):
         gitPull()
-        return
-
-    if len(args) == 1 and autoCommit():
         return
 
     args_str = ""
     # get args
     if len(args) > 1:
-        for i in range(1, len(args)):
+        start = 2 if args[1] == "--push" else 1
+        for i in range(start, len(args)):
             args_str += args[i] + " "
-        commit_message = args_str if args_str != "" else ""
+        commit_message = args_str.strip() if args_str != "" else ""
     else:
         commit_message = ""
+
+    if len(args) > 1 and args[1] == "--push":
+        gitPush(commit_message)
+        return
+
+    if len(args) == 1 and autoCommit():
+        return
 
     action = Menu.select_fzf_menu([
         "[blue]Push",
