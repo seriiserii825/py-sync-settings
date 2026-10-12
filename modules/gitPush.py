@@ -11,19 +11,25 @@ from modules.checkIfPullNeeded import checkIfPullNeeded
 from modules.checkIfPushNeeded import checkIfPushNeeded
 from utils.decryptFiles import decryptFiles
 from utils.encryptFiles import encryptFiles
-from utils.tableMenu import tableMenu
 
 user = os.getlogin()
 
 project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-commands = {
-    "1": "feat",
-    "2": "upd",
-    "3": "bug-fix",
-    "4": "fix",
-    "5": "core",
-}
+
+def detectCommitType(message):
+    lower = message.lower()
+    if "conflict" in lower:
+        return "merge-conflict"
+    if "upd" in lower:
+        return "upd"
+    if "bug" in lower:
+        return "bug-fix"
+    if "fix" in lower:
+        return "fix"
+    if "install" in lower:
+        return "core"
+    return "feat"
 
 
 def getExcludedDirs():
@@ -37,39 +43,29 @@ def getExcludedDirs():
 def pushChanges(commit_message_param=""):
     # show current path
     print(f"[green]Current path: {os.getcwd()}")
-    choose = tableMenu()
-    if choose in ["1", "2", "3", "4", "5"]:
-        if commit_message_param == "":
-            os.system("lazygit")
-        if commit_message_param == "" and not checkIfPushNeeded():
+    if commit_message_param == "":
+        os.system("lazygit")
+        if not checkIfPushNeeded():
             os.system("git push")
             print("[green]Done")
             decryptFiles()
             return
-        commit_message = (
-            commit_message_param
-            if commit_message_param != ""
-            else Prompt.ask("Commit message: ")
-        )
-        if commit_message == "":
-            print("[red]Commit message is required")
-            gitPush()
-        git_command = "git add ."
-        git_command += f' && git commit -m "{commands[choose]}: {commit_message}"'
-        git_command += " && git push"
-        os.system(git_command)
-        print("[green]Done")
-        decryptFiles()
-    else:
-        if choose == "6":
-            os.system("lazygit")
-            gitPush()
-        elif choose == "7":
-            print("[red]Bye")
-            exit()
-        else:
-            print("[red]Invalid option")
-            gitPush()
+    commit_message = (
+        commit_message_param
+        if commit_message_param != ""
+        else Prompt.ask("Commit message: ")
+    )
+    if commit_message == "":
+        print("[red]Commit message is required")
+        gitPush()
+        return
+    commit_type = detectCommitType(commit_message)
+    git_command = "git add ."
+    git_command += f' && git commit -m "{commit_type}: {commit_message}"'
+    git_command += " && git push"
+    os.system(git_command)
+    print("[green]Done")
+    decryptFiles()
 
 
 def gitModules():
