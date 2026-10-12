@@ -20,6 +20,10 @@ def menu():
         gitPull()
         return
 
+    if len(args) > 1 and args[1] == "--sync":
+        syncGit()
+        return
+
     args_str = ""
     # get args
     if len(args) > 1:
