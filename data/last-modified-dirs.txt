@@ -1,7 +1,7 @@
-/home/serii/dotfiles/.config/nvim/
-/home/serii/dotfiles/
-/home/serii/Documents/bash/
-/home/serii/Documents/go/go-course/
-/home/serii/Documents/Apps/nvim-coc/
+/home/serii/Documents/python/py-bitbucket/
 /home/serii/Documents/python/py-wp/
 /home/serii/Documents/python/py-sync-settings/
+/home/serii/Documents/chrome-extensions/chrome-tabs-copy/
+/home/serii/Documents/Apps/mpv-bash/
+/home/serii/Documents/mpv-bash/
+/home/serii/dotfiles/
