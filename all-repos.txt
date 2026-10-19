@@ -29,6 +29,7 @@
 /home/serii/Documents/laravel/devgs/
 /home/serii/Documents/laravel/macservice/
 /home/serii/Documents/go/go-course/
+/home/serii/Documents/go/go-mod-study/
 /home/serii/Documents/neovim-lua/
 /home/serii/Documents/chrome-extensions/chrome-graphql-export/
 /home/serii/Documents/chrome-extensions/chrome-autocopy/
