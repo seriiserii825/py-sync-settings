@@ -1,4 +1,1 @@
-/home/serii/Documents/bash/
-/home/serii/Documents/go/go-course/
-/home/serii/Documents/Knowledge-base_/
-/home/serii/Documents/python/py-sync-settings/
+/home/serii/Documents/Apps/nvim-coc/
