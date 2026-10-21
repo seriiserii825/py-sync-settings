@@ -7,7 +7,7 @@ from libs.Menu import Menu
 from modules.autoCommit import autoCommit
 from modules.gitClone import gitClone
 from modules.gitPull import gitPull
-from modules.gitPush import gitPush
+from modules.gitPush import gitPush, gitPushWithTag
 from modules.syncGit import syncGit
 
 console = Console()
@@ -27,7 +27,7 @@ def menu():
     args_str = ""
     # get args
     if len(args) > 1:
-        start = 2 if args[1] == "--push" else 1
+        start = 2 if args[1] in ("--push", "--push-tag") else 1
         for i in range(start, len(args)):
             args_str += args[i] + " "
         commit_message = args_str.strip() if args_str != "" else ""
@@ -36,6 +36,10 @@ def menu():
 
     if len(args) > 1 and args[1] == "--push":
         gitPush(commit_message)
+        return
+
+    if len(args) > 1 and args[1] == "--push-tag":
+        gitPushWithTag(commit_message)
         return
 
     if len(args) == 1 and autoCommit():

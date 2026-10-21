@@ -1,4 +1,5 @@
 import os
+import re
 import subprocess
 
 from rich import print
@@ -160,3 +161,39 @@ def gitPush(commit_message=""):
                 pushChanges(commit_message_param=commit_message)
             else:
                 print("[red]No changes to commit")
+
+
+TAG_FORMAT = "lft v<major>.<minor>.<patch> <message> (e.g. lft v0.2.0 fix)"
+
+
+def parseTagArgs(args_str):
+    parts = args_str.split(maxsplit=1)
+    if len(parts) < 2 or not re.fullmatch(r"v\d+\.\d+\.\d+", parts[0]):
+        return None, None
+    return parts[0], parts[1].strip()
+
+
+def tagExists(tag):
+    result = subprocess.run(
+        ["git", "rev-parse", "-q", "--verify", f"refs/tags/{tag}"],
+        capture_output=True,
+    )
+    return result.returncode == 0
+
+
+def gitPushWithTag(args_str=""):
+    tag, commit_message = parseTagArgs(args_str)
+    if not tag:
+        print("[red]Tag and message are required")
+        print(f"[yellow]Format: {TAG_FORMAT}")
+        return
+    if not checkForGitDir():
+        return
+    if tagExists(tag):
+        print(f"[red]Tag {tag} already exists")
+        return
+    if gitPush(commit_message):
+        return
+    subprocess.run(["git", "tag", "-a", tag, "-m", commit_message], check=True)
+    subprocess.run(["git", "push", "origin", tag], check=True)
+    print(f"[green]Tag {tag} pushed")
