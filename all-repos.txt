@@ -28,8 +28,11 @@
 /home/serii/Documents/laravel/lv-educore-legacy/
 /home/serii/Documents/laravel/devgs/
 /home/serii/Documents/laravel/macservice/
+/home/serii/Documents/go/go-scripts/
+/home/serii/Documents/go/go-bitbucket/
+/home/serii/Documents/go/go-libs/
 /home/serii/Documents/go/go-course/
-/home/serii/Documents/go/go-mod-study/
+/home/serii/Documents/go/go-scss/
 /home/serii/Documents/neovim-lua/
 /home/serii/Documents/chrome-extensions/chrome-graphql-export/
 /home/serii/Documents/chrome-extensions/chrome-autocopy/
@@ -93,9 +96,7 @@
 /home/serii/Documents/python/py-lv/
 /home/serii/Documents/python/py-clipboard/
 /home/serii/Documents/python/py-dotfiles/
-/home/serii/Documents/python/python-scripts/
 /home/serii/Documents/python/py-private/
-/home/serii/Documents/python/py-scss/
 /home/serii/Documents/python/py-nest/
 /home/serii/Documents/python/py-parsing/
 /home/serii/Documents/python/py-files/
