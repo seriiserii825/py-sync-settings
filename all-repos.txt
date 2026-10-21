@@ -32,7 +32,10 @@
 /home/serii/Documents/php/php-aurora/
 /home/serii/Documents/php/PHP_CodeSniffer/
 /home/serii/Documents/go/go-libs/
+/home/serii/Documents/go/go-bitbucket/
 /home/serii/Documents/go/go-course/
+/home/serii/Documents/go/go-scripts/
+/home/serii/Documents/go/go-scss/
 /home/serii/Documents/chrome-extensions/chrome-autocopy/
 /home/serii/Documents/chrome-extensions/chrome-generate-image-on-new-tab/
 /home/serii/Documents/chrome-extensions/chrome-graphql-export/
@@ -66,9 +69,6 @@
 /home/serii/Documents/mpv-bash/
 /home/serii/Documents/bash/
 /home/serii/.codex/.tmp/plugins/
-/home/serii/Downloads/go-bitbucket/
-/home/serii/Downloads/go-scripts/
-/home/serii/Downloads/go-scss/
 /home/serii/dotfiles/
 /home/serii/.cache/yay/gtk2/
 /home/serii/.cache/yay/xnviewmp/
