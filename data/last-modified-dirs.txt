@@ -1,0 +1,7 @@
+/home/serii/Documents/bash/
+/home/serii/Documents/go/go-scripts/
+/home/serii/Documents/go/go-bitbucket/
+/home/serii/Documents/go/go-libs/
+/home/serii/Documents/go/go-scss/
+/home/serii/Documents/python/py-sync-settings/
+/home/serii/Documents/python/py-bitbucket/
